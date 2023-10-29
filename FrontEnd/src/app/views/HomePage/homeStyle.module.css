@@ -1,0 +1,413 @@
+
+html {
+    scroll-behavior: smooth;
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none;
+}
+/* ------------------------------------------------------------ */
+header {
+    background: linear-gradient(#000000a1 100%, gray), url('https://images.unsplash.com/photo-1690460814053-5906ac3e90cd?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    @apply 
+    h-screen
+    bg-no-repeat 
+    bg-center
+    bg-cover
+    flex
+    bg-fixed
+}
+
+header > div:first-child {
+    @apply flex 
+    fixed w-full
+    justify-between 
+    items-center
+    font-semibold 
+    text-white 
+    z-50
+    h-14 
+}
+
+header > div:first-child > :first-child {
+    @apply 
+    w-40
+    text-right
+}
+
+header > div:last-child {
+    @apply w-full flex h-full justify-center items-center
+}
+
+#annoucement {
+    @apply h-fit text-center font-rock
+}
+
+#annoucement > h1 {
+    @apply text-6xl text-red-500 font-semibold
+}
+
+#annoucement > h3 {
+    @apply text-4xl text-white font-semibold m-10 mb-12
+}
+
+#annoucement > a {
+    @apply 
+    bg-red-500 
+    bg-opacity-90 
+    p-5 
+    pl-12 
+    pr-12 
+    text-white 
+    rounded-lg
+    hover:bg-white
+    hover:text-black
+}
+
+nav ul {
+    @apply flex justify-end pr-4
+}
+
+nav ul li {
+    @apply 
+    text-center
+    w-24
+    h-full
+}
+
+header > div:first-child > :first-child, nav a {
+    @apply hover:text-red-500
+    hover:font-bold
+}
+
+main section {
+    @apply
+    bg-blueblack
+    h-screen
+}
+
+/* ------------------------------------------------------------ */
+#music > :first-child {
+    @apply
+    w-full
+    h-2/4
+    flex
+    flex-col
+    justify-center
+    items-center
+    text-white    
+}
+
+#music > :first-child > h2 {
+    @apply
+    h-1/5
+    text-2xl
+    font-bold
+    font-rock
+    pt-14
+    border-b-4 
+    border-red-500
+    mb-5
+}
+
+#music > :first-child > div {
+    @apply
+    h-3/4
+    flex
+    pt-5
+    justify-center
+    items-start
+}
+
+#music > :first-child > div > div {
+    @apply m-3
+    text-center
+}
+
+#music > :first-child > div > div > :first-child {
+    @apply overflow-hidden
+}
+
+#music > :first-child img {
+    transition: transform 1s;
+    will-change: transform;
+    @apply
+    w-56
+    h-56
+    rounded-sm
+    object-cover
+}
+
+#music > :first-child img:hover {
+    transform: scale(1.1);
+}
+
+#music > :first-child > div > div > :nth-child(2) {
+    @apply font-rock pt-2
+}
+
+#music > :first-child > div > div > :last-child {
+    @apply flex
+    text-sm
+    mt-1
+    text-gray-400
+    font-semibold
+    justify-center
+}
+
+#music > :first-child > div > div > :last-child > :nth-child(2){
+    @apply pl-2 pr-2
+}
+
+#music > :last-child {
+    background: url("https://images.unsplash.com/photo-1614247912229-26a7e2114c0a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    @apply 
+    w-full
+    h-2/4
+    bg-fixed
+}
+
+/* ------------------------------------------------------------ */
+
+#members {
+    @apply flex
+    flex-col
+    justify-center
+    items-center
+    h-screen
+    max-h-[50vh]
+    text-white
+    bg-blueblack
+}
+
+#members > :nth-child(2) > div > :first-child {
+    @apply overflow-hidden
+}
+
+#members img {
+    transition: transform 1s;
+    will-change: transform;
+    @apply
+    w-56
+    h-56
+    rounded-md
+    object-cover
+}
+
+#members img:hover {
+    transform: scale(1.1);
+}
+
+#members > h2 {
+    @apply font-bold
+    font-rock
+    text-2xl
+    pb-1
+    border-b-4 
+    border-red-500
+}
+
+#members > :nth-child(2) {
+    @apply flex
+    m-8
+}
+
+#members > :nth-child(2) > div {
+    @apply m-3
+    text-center
+}
+
+#members > :nth-child(2) > div > div:nth-child(2){
+    @apply font-alkatra
+    mt-2.5
+}
+
+#members > :nth-child(2) > div > div:nth-child(3){
+    font-family: Helvetica;
+    @apply text-xs
+    font-extrabold
+    mt-0.5
+    text-red-500
+}
+
+/* ------------------------------------------------------------ */
+
+#phase {
+    background: linear-gradient(#000000a2 100%, transparent), url("https://images.unsplash.com/photo-1531651008558-ed1740375b39?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    @apply 
+    w-full
+    h-screen
+    bg-no-repeat
+    bg-cover
+    bg-center
+    bg-fixed
+    max-h-[50vh]
+}
+
+/* ------------------------------------------------------------ */
+#events {
+    @apply 
+    text-white 
+    flex
+    flex-col
+    justify-between
+    items-center
+}
+
+#events h2 {
+    @apply font-bold
+    flex
+    items-end
+    font-rock   
+    pb-2
+    text-2xl
+    h-1/5
+    w-fit
+    border-b-4 
+    border-red-500
+}
+
+#events table {
+    @apply m-auto mt-12
+}
+
+#events table tbody {
+    @apply flex m-2 p-5
+}
+
+#events table tbody > tr  {
+    @apply flex flex-col mr-5 text-left
+}
+
+#events table td {
+    @apply text-gray-400 text-sm font-bold
+}
+
+#events table th {
+    @apply text-2xl font-alkatra
+}
+
+#events table tbody > tr:nth-child(2) {
+    @apply mr-60
+}
+
+#events table tbody > tr:nth-child(2) ~ * {
+    @apply text-gray-400
+}
+
+/* ------------------------------------------------------------ */
+#media {
+    @apply bg-white
+    pt-1 pb-1
+}
+
+#media > div {
+    display: grid;
+    height: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-gap: 0.25rem;
+	grid-template-areas:
+				 "left middle top top"
+				 "left middle little right"
+				 "left wide wide right"
+				 "left wide wide bottom"
+}
+
+#media > div > div {
+    @apply bg-center bg-no-repeat bg-cover
+}
+
+#media > div > :nth-child(1){
+	grid-area: left;
+}
+
+#media > div > :nth-child(2){
+	grid-area: middle;
+}
+
+#media > div > :nth-child(3){
+	grid-area: wide;
+}
+
+#media > div > :nth-child(4){
+	grid-area: little;
+}
+
+#media > div > :nth-child(5){
+	grid-area: top;
+}
+
+#media > div > :nth-child(6){
+	grid-area: right;
+}
+
+#media > div > :nth-child(7){
+	grid-area: bottom;
+}
+
+/* ------------------------------------------------------------ */
+footer {
+    @apply 
+    flex
+    flex-col
+    justify-center
+    items-center
+    w-full
+    h-screen
+    text-white
+    bg-blueblack
+}
+
+footer > form {
+    @apply m-auto w-2/5
+}
+
+footer > form > div:not(div:nth-child(2)) {
+    @apply flex flex-col mt-7
+}
+
+footer > form > div:not(div:nth-child(2)) > :first-child {
+    @apply mb-2 font-alkatra text-xl
+}
+
+footer > form > div:nth-child(2) {
+    @apply mt-7 flex
+}
+
+footer > form > div:nth-child(2) > div {
+    width: 49%;
+    @apply flex flex-col
+}
+
+footer > form > div:nth-child(2) > div > :first-child {
+    @apply mb-2 font-alkatra text-xl
+}
+
+footer > form > div:nth-child(2) > div:nth-child(2) {
+    @apply ml-auto
+}
+
+footer textarea {
+    @apply resize-none
+}
+
+footer  input, textarea {
+    background-color: #00000057 !important;
+    @apply !border-gray-700
+}
+
+footer > form > div > input[type="text"], input[type="email"], input[type="tel"] {
+    @apply h-16
+}
+
+footer > form > input[type="submit"]{
+    @apply !bg-red-500 p-3 pl-10 pr-10 font-bold rounded-md mt-5 w-full text-lg font-rock
+}
+
+footer > div {
+    @apply flex m-auto mt-0 w-fit h-fit
+}
+
+footer > div > * {
+    @apply m-10 mt-0 text-3xl rounded-full p-6 border-b-4 border-red-500 cursor-pointer
+}
