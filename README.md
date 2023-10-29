@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [Git](https://git-scm.com/)
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
-- [Scss](https://sass-lang.com/)
+- [TailWind](https://tailwindcss.com/)
 - [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [Yarn](https://yarnpkg.com/)
 - [Javascript](https://www.typescriptlang.org/)
