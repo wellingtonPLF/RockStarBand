@@ -3,6 +3,8 @@ import HomeView from './homeView'
 import { useState } from 'react';
 
 const HomeScript = () => {
+    const [scrollPosition, setScrollPosition] = useState(0)
+
     const albums = [
         { id: 1, name: "Album 1°", img: "https://images.unsplash.com/photo-1603652339750-18328e625af7?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
         { id: 2, name: "Album 2°", img: "https://images.unsplash.com/photo-1500099817043-86d46000d58f?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
@@ -29,8 +31,15 @@ const HomeScript = () => {
         )        
     }
 
+    const handleScrollPosition = (value) => {
+        setScrollPosition(value)
+    }
+
     useEffect(() => {
         handleEvents()
+        window.addEventListener('scroll', function() {
+            handleScrollPosition(window.scrollY);
+          });
     }, [])
 
     const pictures = [
@@ -45,7 +54,8 @@ const HomeScript = () => {
 
     return (
         <>
-            <HomeView music={albums} members={group} tours={events} media={pictures}/>
+            <HomeView music={albums} members={group} 
+            tours={events} media={pictures} scrollPosition={scrollPosition}/>
         </>
     );
 };

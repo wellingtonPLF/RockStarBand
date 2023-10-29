@@ -3,21 +3,24 @@ import {faFacebook, faXTwitter, faYoutube, faInstagram, faTiktok} from "@fortawe
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const HomeView = (props) => {
+  const bgColor = (props.scrollPosition != 0)? "bg-red-500": ""
+  const hoverClick = (props.scrollPosition != 0)? "hover:text-bluegray": ""
+
   return (
       <>
-          <div>
+          <div id={styles.homePage}>
             <header id="home">
-              <div>
+              <div className={bgColor}>
                 {/* <a href="">Super Visionário</a> */}
                 <a href=""></a>
                 <nav>
                   <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href={`#${styles.music}`}>Music</a></li>
-                    <li><a href={`#${styles.members}`}>Members</a></li>
-                    <li><a href={`#${styles.events}`}>Events</a></li>
-                    <li><a href={`#${styles.media}`}>Media</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" className={hoverClick}>Home</a></li>
+                    <li><a href={`#${styles.music}`} className={hoverClick}>Music</a></li>
+                    <li><a href={`#${styles.members}`} className={hoverClick}>Members</a></li>
+                    <li><a href={`#${styles.events}`} className={hoverClick}>Events</a></li>
+                    <li><a href={`#${styles.media}`} className={hoverClick}>Media</a></li>
+                    <li><a href="#contact" className={hoverClick}>Contact</a></li>
                   </ul>
                 </nav>
               </div>
@@ -31,7 +34,6 @@ const HomeView = (props) => {
             </header>
             <main>
               <section id={styles.music}>
-                <div>
                   <h2>Music</h2>
                   <div>
                     {
@@ -50,9 +52,9 @@ const HomeView = (props) => {
                       ))
                     }
                   </div>
-                </div>
-                <div></div>
               </section>
+
+              <div id={styles.player}></div>
 
               <section id={styles.members}>
                   <h2>Who We Are</h2>
@@ -72,7 +74,15 @@ const HomeView = (props) => {
               </section>
               
               <section id={styles.phase}>
-                  <div></div>
+                  <div>
+                    <div>
+                      "Little things makes you smile.
+                      Dance barefoot in the dark.
+                      Choose your words before you speak.
+                      Can't you see that all you've got is time."
+                    </div>
+                    <div>KALAO</div>
+                  </div>
               </section>
 
               <section id={styles.events}>
@@ -131,25 +141,25 @@ const HomeView = (props) => {
               <form action="" method="post">
                   <div>
                     <label htmlFor="name">Name</label>
-                    <input type="text" id="name" name="name" required/>
+                    <input type="text" id="name" autoComplete="off" name="name" required/>
                   </div>
                   <div>
                     <div>
                       <label htmlFor="email">Email</label>
-                      <input type="email" id="email" name="email" required />
+                      <input type="email" id="email" autoComplete="off" name="email" required />
                     </div>
                     <div>
                       <label htmlFor="tel">Phone</label>
-                      <input type="tel" id="tel" name="tel" required />
+                      <input type="tel" id="tel" autoComplete="off" name="tel" required />
                     </div>
                   </div>
                   <div>
                     <label htmlFor="enterprise">Enterprise</label>
-                    <input type="text" id="enterprise" name="enterprise" required/>
+                    <input type="text" id="enterprise" autoComplete="off" name="enterprise" required/>
                   </div>
                   <div>
                     <label htmlFor="comments">Comments</label>
-                    <textarea id="comments" name="comments" rows="7" cols="50"></textarea>
+                    <textarea id="comments" autoComplete="off" name="comments"></textarea>
                   </div>
                   <input type="submit" value="Submit" />
               </form>

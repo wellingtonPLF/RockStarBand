@@ -5,6 +5,10 @@ html {
     -moz-user-select: none; /* For Firefox */
     -ms-user-select: none;
 }
+
+#homePage {
+    @apply min-w-[220px]
+}
 /* ------------------------------------------------------------ */
 header {
     background: linear-gradient(#000000a1 100%, gray), url('https://images.unsplash.com/photo-1690460814053-5906ac3e90cd?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -25,7 +29,7 @@ header > div:first-child {
     font-semibold 
     text-white 
     z-50
-    h-14 
+    h-14 transition-all duration-500
 }
 
 header > div:first-child > :first-child {
@@ -67,9 +71,10 @@ nav ul {
     @apply flex justify-end pr-4
 }
 
-nav ul li {
+nav ul li a{
     @apply 
-    text-center
+    flex
+    justify-center
     w-24
     h-full
 }
@@ -86,48 +91,50 @@ main section {
 }
 
 /* ------------------------------------------------------------ */
-#music > :first-child {
+#music {
     @apply
     w-full
-    h-2/4
     flex
+    h-fit
+    min-h-[50vh]
+    pb-9
     flex-col
     justify-center
     items-center
     text-white    
 }
 
-#music > :first-child > h2 {
+#music > h2 {
     @apply
-    h-1/5
     text-2xl
     font-bold
     font-rock
-    pt-14
+    mt-20
+    pb-1
     border-b-4 
     border-red-500
-    mb-5
 }
 
-#music > :first-child > div {
+#music > div {
     @apply
-    h-3/4
     flex
-    pt-5
+    m-auto
+    mt-4
+    flex-wrap
     justify-center
     items-start
 }
 
-#music > :first-child > div > div {
+#music > div > div {
     @apply m-3
     text-center
 }
 
-#music > :first-child > div > div > :first-child {
+#music > div > div > :first-child {
     @apply overflow-hidden
 }
 
-#music > :first-child img {
+#music img {
     transition: transform 1s;
     will-change: transform;
     @apply
@@ -137,15 +144,15 @@ main section {
     object-cover
 }
 
-#music > :first-child img:hover {
+#music img:hover {
     transform: scale(1.1);
 }
 
-#music > :first-child > div > div > :nth-child(2) {
+#music > div > div > div:nth-child(2) {
     @apply font-rock pt-2
 }
 
-#music > :first-child > div > div > :last-child {
+#music > div > div > :last-child {
     @apply flex
     text-sm
     mt-1
@@ -154,15 +161,19 @@ main section {
     justify-center
 }
 
-#music > :first-child > div > div > :last-child > :nth-child(2){
+#music > div > div > :last-child > :nth-child(2){
     @apply pl-2 pr-2
 }
+/* ------------------------------------------------------------ */
 
-#music > :last-child {
+#player {
     background: url("https://images.unsplash.com/photo-1614247912229-26a7e2114c0a?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     @apply 
     w-full
-    h-2/4
+    bg-no-repeat
+    bg-cover
+    h-screen
+    max-h-[50vh]
     bg-fixed
 }
 
@@ -173,8 +184,9 @@ main section {
     flex-col
     justify-center
     items-center
-    h-screen
-    max-h-[50vh]
+    h-fit
+    min-h-50vh
+    pb-7
     text-white
     bg-blueblack
 }
@@ -202,13 +214,13 @@ main section {
     font-rock
     text-2xl
     pb-1
+    mt-20
     border-b-4 
     border-red-500
 }
 
 #members > :nth-child(2) {
-    @apply flex
-    m-8
+    @apply flex m-auto mt-4 flex-wrap justify-center
 }
 
 #members > :nth-child(2) > div {
@@ -240,7 +252,16 @@ main section {
     bg-cover
     bg-center
     bg-fixed
+    flex 
     max-h-[50vh]
+}
+
+#phase > div {
+    @apply text-white font-semibold w-1/3 m-auto text-center font-rock
+}
+
+#phase > div > :nth-child(2) {
+    @apply mt-2 italic font-alkatra
 }
 
 /* ------------------------------------------------------------ */
@@ -278,6 +299,10 @@ main section {
     @apply flex flex-col mr-5 text-left
 }
 
+#events table tbody > tr:first-child {
+    @apply min-w-[100px]
+}
+
 #events table td {
     @apply text-gray-400 text-sm font-bold
 }
@@ -287,7 +312,8 @@ main section {
 }
 
 #events table tbody > tr:nth-child(2) {
-    @apply mr-60
+    margin-right: 8vw
+    /* @apply mr-15vw */
 }
 
 #events table tbody > tr:nth-child(2) ~ * {
@@ -350,16 +376,21 @@ footer {
     @apply 
     flex
     flex-col
-    justify-center
+    justify-end
     items-center
     w-full
+    pb-8
     h-screen
     text-white
     bg-blueblack
 }
 
 footer > form {
-    @apply m-auto w-2/5
+    @apply w-176 mt-20 mb-10
+}
+
+footer textarea{
+    @apply h-44
 }
 
 footer > form > div:not(div:nth-child(2)) {
@@ -375,8 +406,7 @@ footer > form > div:nth-child(2) {
 }
 
 footer > form > div:nth-child(2) > div {
-    width: 49%;
-    @apply flex flex-col
+    @apply flex flex-col w-49%
 }
 
 footer > form > div:nth-child(2) > div > :first-child {
@@ -404,10 +434,175 @@ footer > form > input[type="submit"]{
     @apply !bg-red-500 p-3 pl-10 pr-10 font-bold rounded-md mt-5 w-full text-lg font-rock
 }
 
-footer > div {
-    @apply flex m-auto mt-0 w-fit h-fit
+footer > :last-child {
+    @apply flex justify-between w-[40rem] m-auto mt-0
 }
 
-footer > div > * {
-    @apply m-10 mt-0 text-3xl rounded-full p-6 border-b-4 border-red-500 cursor-pointer
+footer > :last-child > * {
+    @apply text-3xl rounded-full p-6 border-b-4 border-red-500 cursor-pointer
+}
+
+@media screen and (max-width: 812px){
+    #events h2 {
+        @apply 
+        pb-[0.7vw]
+        text-[2.8vw]
+        border-b-[0.5vw] 
+    }
+    
+    #events table {
+        @apply 
+        mt-[5vw]
+    }
+    
+    #events table tbody {
+        @apply 
+        m-[0.3vw]
+        p-[3.3vw]
+    }
+    
+    #events table tbody > tr  {
+        @apply 
+        mr-[3.3vw]
+    }
+    
+    #events table tbody > tr:first-child {
+        @apply 
+        min-w-[11vw]
+    }
+    
+    #events table td {
+        @apply 
+        text-[1.6vw]
+    }
+    
+    #events table th {
+        @apply 
+        text-[2.8vw]
+    }
+}
+
+@media screen and (max-width: 800px){
+    footer > form {
+        @apply w-[450px] mt-[3.5rem] 
+    }
+
+    footer textarea{
+        @apply h-32
+    }    
+
+    footer > form > div:nth-child(2) {
+        @apply flex flex-col h-auto
+    }
+
+    footer > form > div:nth-child(2) > div {
+        @apply !m-0 w-full
+    }
+
+    footer > form > div:nth-child(2) > div:nth-child(2) {
+        @apply pt-7
+    }
+
+    footer > :last-child {
+        @apply w-[30rem]
+    }
+}
+
+@media screen and (max-width: 600px){    
+    
+    header > div > a{
+        display: none;
+    }
+
+    header > div:first-child {
+        @apply justify-center
+    }
+    
+    #annoucement > h1 {
+        @apply text-[10vw] 
+    }
+    
+    #annoucement > h3 {
+        @apply text-[6vw] m-[6.7vw] mb-[8vw]
+    }
+    
+    #annoucement > a {
+        @apply 
+        p-[3.3vw] 
+        pl-[8vw]
+        pr-[8vw]
+    }
+    
+    nav ul {
+        @apply pr-[2.6vw]
+    }
+    
+    nav ul li a{
+        @apply
+        w-[15vw]
+        text-[3vw]
+    }
+    /* ------------------------------------------------------------------------------------------------------------------------ */
+    
+    footer > form {
+        @apply w-[75vw] mt-[6vh] mb-[5vh]
+    }
+
+    footer textarea{
+        @apply h-[20vw]
+    }
+    
+    footer > form > div:not(div:nth-child(2)) {
+        @apply mt-[4.6vw]
+    }
+    
+    footer > form > div:not(div:nth-child(2)) > :first-child {
+        @apply mb-[1vw] text-[3.3vw]
+    }
+
+    footer > form > div:nth-child(2) {
+        @apply mt-[4.6vw]
+    }
+
+    footer > form > div:nth-child(2) > div:nth-child(2) {
+        @apply pt-[4.6vw]
+    }
+    
+    footer > form > div:nth-child(2) > div > :first-child {
+        @apply mb-[1vw] text-[3.3vw]
+    }
+    
+    footer > form > div > input[type="text"], input[type="email"], input[type="tel"] {
+        @apply h-[9.5vw]
+    }
+    
+    footer > form > input[type="submit"]{
+        @apply 
+        p-[2vw] 
+        pl-[6.6vw] 
+        pr-[6.6vw] 
+        rounded-[1vw] 
+        mt-[3.3vw]
+        text-[3vw]
+    }
+    
+    footer > :last-child {
+        @apply 
+        w-[80.6vw]
+    }
+    
+    footer > :last-child > * {
+        @apply 
+        text-[5vw]
+        p-[4vw] 
+        border-b-[0.8vw]
+    }
+    /* ------------------------------------------------------------------------------------------------------------------------ */
+}
+
+@media screen and (max-width: 425px){
+    footer > :last-child {
+        @apply 
+        flex-col
+    }
 }
