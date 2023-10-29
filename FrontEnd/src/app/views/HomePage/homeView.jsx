@@ -8,7 +8,8 @@ const HomeView = (props) => {
           <div>
             <header id="home">
               <div>
-                <a href="">Super Visionário</a>
+                {/* <a href="">Super Visionário</a> */}
+                <a href=""></a>
                 <nav>
                   <ul>
                     <li><a href="#home">Home</a></li>
