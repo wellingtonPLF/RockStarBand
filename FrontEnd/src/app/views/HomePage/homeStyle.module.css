@@ -431,7 +431,7 @@ footer > form > div > input[type="text"], input[type="email"], input[type="tel"]
 }
 
 footer > form > input[type="submit"]{
-    @apply !bg-red-500 p-3 pl-10 pr-10 font-bold rounded-md mt-5 w-full text-lg font-rock
+    @apply !bg-red-500 p-3 pl-10 pr-10 font-bold rounded-md mt-5 w-full text-lg font-rock cursor-pointer
 }
 
 footer > :last-child {

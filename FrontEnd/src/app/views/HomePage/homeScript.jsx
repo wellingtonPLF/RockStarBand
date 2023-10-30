@@ -22,7 +22,7 @@ const HomeScript = () => {
     const [events, setEvents] = useState();
 
     const handleEvents = () => {
-        fetch("http://localhost:5173/tours.json").then(res => res.json()).then(value => {
+        fetch("/tours.json").then(res => res.json()).then(value => {
             return value
         }).then(
             it => {
