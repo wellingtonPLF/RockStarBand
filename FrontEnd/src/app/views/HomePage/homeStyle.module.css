@@ -71,9 +71,10 @@ nav ul {
     @apply flex justify-end pr-4
 }
 
-nav ul li a{
+nav ul *{
     @apply 
     flex
+    cursor-pointer
     justify-center
     w-24
     h-full

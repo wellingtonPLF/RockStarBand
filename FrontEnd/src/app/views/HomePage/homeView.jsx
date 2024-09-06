@@ -1,6 +1,9 @@
 import styles from "./homeStyle.module.css"
 import {faFacebook, faXTwitter, faYoutube, faInstagram, faTiktok} from "@fortawesome/free-brands-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import { Link as GO } from 'react-scroll';
 
 const HomeView = (props) => {
   const bgColor = (props.scrollPosition != 0)? "bg-red-500": ""
@@ -9,29 +12,33 @@ const HomeView = (props) => {
   return (
       <>
           <div id={styles.homePage}>
-            <header id="home">
-              <div className={bgColor}>
-                {/* <a href="">Super Visionário</a> */}
-                <a href=""></a>
-                <nav>
-                  <ul>
-                    <li><a href="#home" className={hoverClick}>Home</a></li>
-                    <li><a href={`#${styles.music}`} className={hoverClick}>Music</a></li>
-                    <li><a href={`#${styles.members}`} className={hoverClick}>Members</a></li>
-                    <li><a href={`#${styles.events}`} className={hoverClick}>Events</a></li>
-                    <li><a href={`#${styles.media}`} className={hoverClick}>Media</a></li>
-                    <li><a href="#contact" className={hoverClick}>Contact</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div>
-                <div id={styles.annoucement}>
-                  <h1 id={styles.year}>2023</h1>
-                  <h3>NEXT SHOW WILL BE ANNOUNCED SOON</h3>
-                  <a href={`#${styles.events}`}>VIEW DATES</a>
+              <header id="home">
+                <div className={bgColor}>
+                  <Link to="/authentication">
+                    <ul style={{display: "flex", marginLeft: "8vw"}}>
+                      <li><a href=""><FontAwesomeIcon icon={faUser} /></a></li>
+                      <li style={{ marginLeft: "15px", fontSize: "18px"}}><a href="">Account</a></li>
+                    </ul>
+                  </Link>
+                  <nav>
+                    <ul>
+                      <GO to="home" smooth={true} duration={100} className={hoverClick}>Home</GO>
+                      <GO to={`${styles.music}`} smooth={true} duration={100} className={hoverClick}>Music</GO>
+                      <GO to={`${styles.members}`} smooth={true} duration={100} className={hoverClick}>Members</GO>
+                      <GO to={`${styles.events}`} smooth={true} duration={100} className={hoverClick}>Events</GO>
+                      <GO to={`${styles.media}`} smooth={true} duration={100} className={hoverClick}>Media</GO>
+                      <GO to="contact" smooth={true} duration={100} className={hoverClick}>Contact</GO>
+                    </ul>
+                  </nav>
                 </div>
-              </div>
-            </header>
+                <div>
+                  <div id={styles.annoucement}>
+                    <h1 id={styles.year}>2023</h1>
+                    <h3>NEXT SHOW WILL BE ANNOUNCED SOON</h3>
+                    <a href={`#${styles.events}`}>VIEW DATES</a>
+                  </div>
+                </div>
+              </header>
             <main>
               <section id={styles.music}>
                   <h2>Music</h2>
