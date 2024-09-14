@@ -15,7 +15,7 @@ const HomeView = (props) => {
               <header id="home">
                 <div className={bgColor}>
                   <Link to="/authentication">
-                    <ul style={{display: "flex", marginLeft: "8vw"}}>
+                    <ul style={{display: "flex", marginLeft: "8vw"}} className={hoverClick}>
                       <li><a href=""><FontAwesomeIcon icon={faUser} /></a></li>
                       <li style={{ marginLeft: "15px", fontSize: "18px"}}><a href="">Account</a></li>
                     </ul>

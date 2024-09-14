@@ -37,7 +37,7 @@
 }
 
 #topAuth > h1 {
-    @apply text-2xl
+    @apply text-2xl mb-3 font-medium
 }
 
 #auth {
