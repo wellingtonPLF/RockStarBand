@@ -1,0 +1,42 @@
+
+#topAuth {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#topAuth > h1 {
+    @apply text-2xl mb-3 font-medium
+}
+
+#auth {
+    @apply p-4 pl-0 pr-0
+}
+
+#auth > div {
+    @apply flex flex-col
+}
+
+#bottomAuth {
+    @apply flex justify-between text-sm
+}
+
+#bottomAuth > :first-child > label {
+    @apply ml-2
+}
+
+#bottomAuth > :nth-child(2){
+    @apply font-medium
+}
+
+#signIn {
+    @apply bg-black text-white w-full p-3 mt-5
+}
+
+#signUp {
+    @apply font-medium text-sm text-start mt-5
+}
+
+#signUp > a {
+    @apply text-blue-600 cursor-pointer
+}

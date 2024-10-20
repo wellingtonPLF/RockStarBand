@@ -1,19 +1,18 @@
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import AuthView from './authView'
+import authService from '@services/authService';
 
 const AuthScript = () => {
-    // const [events, setEvents] = useState();
 
-    // useEffect(() => {
-    //     handleEvents()
-    //     window.addEventListener('scroll', function() {
-    //         handleScrollPosition(window.scrollY);
-    //       });
-    // }, [])
+    const [isLogged, setIsLogged] = useState(true)
+
+    const handleIsLogged = (value) => {
+        setIsLogged(value)
+    }
 
     return (
         <>
-            <AuthView/>
+            <AuthView isLogged={isLogged} setLogged={handleIsLogged}/>
         </>
     );
 };
