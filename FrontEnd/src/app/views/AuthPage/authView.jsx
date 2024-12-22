@@ -1,6 +1,6 @@
 import styles from "./authStyle.module.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faApple, faGoogle, faMicrosoft, faWindows, faXTwitter} from "@fortawesome/free-brands-svg-icons";
+import {faApple, faGoogle, faWindows, faXTwitter} from "@fortawesome/free-brands-svg-icons";
 import SignUpScript from "../../components/authentication/signUp/signUpScript";
 import SignInScript from "../../components/authentication/signIn/signInScript";
 
@@ -10,7 +10,7 @@ const AuthView = (props) => {
       <>
           <div id={styles.authPage}>
             <div>
-              { props.isLogged ? <SignInScript setLogged={props.setLogged}/> : <SignUpScript setLogged={props.setLogged} /> }
+              { props.getStatus ? <SignInScript setAuthentication={props.setAuthentication}/> : <SignUpScript setAuthentication={props.setAuthentication}/> }
             </div>
             <div id={styles.oAuth}>
               <div>

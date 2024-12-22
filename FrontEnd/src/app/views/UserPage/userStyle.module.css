@@ -71,9 +71,9 @@
 }
 
 #tickets {
-    height: calc(51% - 2rem);
     background-color: #212125;
-    @apply flex flex-col items-center font-alkatra
+    overflow-y: auto;
+    @apply flex flex-col items-center font-bold
 }
 
 #tickets > :first-child {
@@ -83,5 +83,12 @@
 #tickets > * {
     background-color: #111113;
     color: white;
-    @apply w-[97%] h-[75px] mb-4 flex items-center pl-5 flex justify-around
+    @apply w-[97%] min-h-[52px] mb-4 items-center pl-5 flex justify-around
+}
+
+#logout {
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }

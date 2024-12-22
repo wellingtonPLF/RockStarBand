@@ -91,6 +91,15 @@ main section {
     h-screen
 }
 
+#annoucement a {
+    @apply cursor-pointer
+}
+
+.errorEvent {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    @apply flex items-center justify-center absolute top-[45%] text-3xl font-rock
+}
+
 /* ------------------------------------------------------------ */
 #music {
     @apply
@@ -273,6 +282,7 @@ main section {
     flex-col
     justify-between
     items-center
+    relative
 }
 
 #events h2 {
@@ -284,8 +294,7 @@ main section {
     text-2xl
     h-1/5
     w-fit
-    border-b-4 
-    border-red-500
+    border-b-4    
 }
 
 #events table {
@@ -300,6 +309,10 @@ main section {
     @apply flex flex-col mr-5 text-left
 }
 
+#events table tbody > tr:nth-child(2) ~ *  {
+    @apply flex flex-col w-[150px] h-[30px] text-left
+}
+
 #events table tbody > tr:first-child {
     @apply min-w-[100px]
 }
@@ -312,14 +325,34 @@ main section {
     @apply text-2xl font-alkatra
 }
 
+#events table th > button{
+    @apply text-red-300
+}
+
+#events table th > button:hover{
+    font-size: 30px;
+}
+
+#events table tbody > tr:nth-child(4) button {
+    @apply text-red-400
+}
+
+#events table tbody > tr:nth-child(5) button {
+    @apply text-red-500
+}
+
 #events table tbody > tr:nth-child(2) {
     margin-right: 8vw
-    /* @apply mr-15vw */
 }
 
 #events table tbody > tr:nth-child(2) ~ * {
     @apply text-gray-400
 }
+
+#events table tbody > tr button:active {
+    @apply text-white
+}
+
 
 /* ------------------------------------------------------------ */
 #media {
@@ -435,12 +468,16 @@ footer > form > input[type="submit"]{
     @apply !bg-red-500 p-3 pl-10 pr-10 font-bold rounded-md mt-5 w-full text-lg font-rock cursor-pointer
 }
 
+footer > form > input[type="submit"]:disabled{
+    @apply cursor-not-allowed
+}
+
 footer > :last-child {
     @apply flex justify-between w-[40rem] m-auto mt-0
 }
 
 footer > :last-child > * {
-    @apply text-3xl rounded-full p-6 border-b-4 border-red-500 cursor-pointer
+    @apply text-3xl rounded-full p-6 border-b-4 border-red-500 cursor-not-allowed
 }
 
 @media screen and (max-width: 812px){

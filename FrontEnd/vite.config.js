@@ -11,7 +11,9 @@ export default defineConfig({
     alias: {
       '@utils': path.resolve(__dirname, 'src/app/shared/utils'),
       '@enums': path.resolve(__dirname, 'src/app/shared/enums'),
-      '@services': path.resolve(__dirname, 'src/app/shared/services'),
+      '@redux': path.resolve(__dirname, 'src/app/shared/redux'),
+      '@models': path.resolve(__dirname, 'src/app/shared/models'),
+      '@services': path.resolve(__dirname, 'src/app/shared/services')
     },
   },
 });

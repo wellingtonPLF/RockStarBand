@@ -1,4 +1,5 @@
 import api from "./_axiosConfig";
+import { User } from "@models/user.js"
 
 class UserService {
 
@@ -28,7 +29,7 @@ class UserService {
 
   async insert(user) {
     try{
-      const { data } = await api.post(`${this.path}/`, User.simpleRefract(user));
+      const { data } = await api.post(`${this.path}/`, User.refract(user));
       return data;
     }
     catch(error) {

@@ -1,18 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import AuthView from './authView'
-import authService from '@services/authService';
 
 const AuthScript = () => {
 
-    const [isLogged, setIsLogged] = useState(true)
+    const [authentication, setAuthentication] = useState(true)
 
-    const handleIsLogged = (value) => {
-        setIsLogged(value)
+    const handleAuthentication = (value) => {
+        setAuthentication(value)
     }
 
     return (
         <>
-            <AuthView isLogged={isLogged} setLogged={handleIsLogged}/>
+            <AuthView getStatus={authentication} setAuthentication={handleAuthentication}/>
         </>
     );
 };

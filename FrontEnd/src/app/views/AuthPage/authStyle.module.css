@@ -30,7 +30,10 @@
     @apply pl-3 pr-3
 }
 
-
 #oAuth {
     @apply bg-purple-500 flex flex-col
+}
+
+#oAuth button {
+    @apply cursor-not-allowed
 }

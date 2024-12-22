@@ -1,8 +1,13 @@
 import { useEffect } from 'react';
 import HomeView from './homeView'
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import eventService from "@services/eventService"
+import { TicketUser } from "@models/ticketUser"
+import { sleep } from '../../shared/utils/general.utils';
 
 const HomeScript = () => {
+    const emailEnabled = false;
     const [scrollPosition, setScrollPosition] = useState(0)
 
     const albums = [
@@ -19,16 +24,33 @@ const HomeScript = () => {
         {id: 4, name: "ALEX MAJOR", position: "DRUMS", img: "https://images.unsplash.com/photo-1614807547811-4174d3582092?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTAwfHxmb3RvJTIwZGUlMjBwZXJmaWwlMjBwcmV0byUyMGUlMjBicmFuY298ZW58MHx8MHx8fDI%3D"}
     ]
 
-    const [events, setEvents] = useState();
+    const [events, setEvents] = useState([]);
+    const [done, setDone] = useState(false);
+    const userRx = useSelector(state => state.usuarioRedux)
 
     const handleEvents = () => {
-        fetch("/tours.json").then(res => res.json()).then(value => {
-            return value
-        }).then(
-            it => {
-                setEvents(it)
+        eventService.listAll().then( 
+            it=> {
+                setEvents(it.data)
             }
-        )        
+        ).catch(() => {
+            console.log("Server in maintenance...")
+        })
+    }
+
+    const handleBuyTicket = (value, index, ticketType) => {
+        setDone(undefined);
+        const ticketUser = new TicketUser(value);
+        eventService.insert(ticketUser).then(
+            async (_) => {
+                setDone(true);
+                await sleep(1);
+                setDone(false);
+            }
+        ).catch((e) => {
+            setDone(false);
+            events[index][ticketType] = undefined;            
+        });
     }
 
     const handleScrollPosition = (value) => {
@@ -39,7 +61,7 @@ const HomeScript = () => {
         handleEvents()
         window.addEventListener('scroll', function() {
             handleScrollPosition(window.scrollY);
-          });
+        });
     }, [])
 
     const pictures = [
@@ -54,8 +76,8 @@ const HomeScript = () => {
 
     return (
         <>
-            <HomeView music={albums} members={group} 
-            tours={events} media={pictures} scrollPosition={scrollPosition}/>
+            <HomeView music={albums} members={group} isLogged={userRx.isLoggedIn} emailStatus={emailEnabled} done={done}
+            tours={events} media={pictures} scrollPosition={scrollPosition} handleBuyTicket={handleBuyTicket}/>
         </>
     );
 };

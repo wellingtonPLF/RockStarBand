@@ -13,7 +13,7 @@
     @apply p-4 pl-0 pr-0
 }
 
-#auth > div {
+#auth > div > div {
     @apply flex flex-col
 }
 

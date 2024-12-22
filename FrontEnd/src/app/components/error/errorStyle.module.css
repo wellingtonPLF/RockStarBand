@@ -1,0 +1,17 @@
+#errorPage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-family: "Bangers", system-ui;
+}
+
+#errorPage > div {
+  width: 550px;
+  position: absolute;
+  top: 35vh;
+}
+
+#errorPage > div > :nth-child(2) {
+  text-align: right;
+}

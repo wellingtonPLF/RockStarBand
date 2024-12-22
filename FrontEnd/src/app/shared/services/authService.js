@@ -1,4 +1,5 @@
 import api from "./_axiosConfig";
+import { Auth } from "@models/auth.js"
 
 class AuthService {
 
@@ -12,7 +13,7 @@ class AuthService {
       return data;
     }
     catch(error) {
-      return Promise.reject(error);
+      return Promise.reject(error.response.data);
     }
   }
 
@@ -28,11 +29,11 @@ class AuthService {
 
   async authInsert(auth) {
     try{
-      const { data } = await api.post(`${this.path}/`, auth);
+      const { data } = await api.post(`${this.path}/`, Auth.refract(auth));
       return data;
     }
     catch(error) {
-      return Promise.reject(error);
+      return Promise.reject(error.response.data);
     }
   }
 

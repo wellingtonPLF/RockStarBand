@@ -2,6 +2,7 @@ import styles from "./homeStyle.module.css"
 import {faFacebook, faXTwitter, faYoutube, faInstagram, faTiktok} from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Link as GO } from 'react-scroll';
 
@@ -9,17 +10,26 @@ const HomeView = (props) => {
   const bgColor = (props.scrollPosition != 0)? "bg-red-500": ""
   const hoverClick = (props.scrollPosition != 0)? "hover:text-bluegray": ""
 
+  useEffect(() => {
+  }, [])
+
   return (
       <>
           <div id={styles.homePage}>
               <header id="home">
                 <div className={bgColor}>
-                  <Link to="/authentication">
-                    <ul style={{display: "flex", marginLeft: "8vw"}} className={hoverClick}>
-                      <li href="">< FontAwesomeIcon icon={faUser}/></li>
-                      <li href="" style={{ marginLeft: "15px", fontSize: "18px"}}>Account</li>
-                    </ul>
-                  </Link>
+                  <div>
+                    {props.isLogged !== undefined ? (
+                      <Link to={props.isLogged ? '/profile' : '/authentication'}>
+                      <ul style={{display: "flex", marginLeft: "8vw"}} className={hoverClick}>
+                        <li href="">< FontAwesomeIcon icon={faUser}/></li>
+                        <li href="" style={{ marginLeft: "15px", fontSize: "18px"}}>Account</li>
+                      </ul>
+                      </Link> 
+                    ) : 
+                      <Link to="/setHost" className="flex w-[105px] ml-[8vw]" >Server Access</Link> 
+                    }
+                  </div>
                   <nav>
                     <ul>
                       <GO to="home" smooth={true} duration={100} className={hoverClick}>Home</GO>
@@ -34,8 +44,8 @@ const HomeView = (props) => {
                 <div>
                   <div id={styles.annoucement}>
                     <h1 id={styles.year}>2023</h1>
-                    <h3>NEXT SHOW WILL BE ANNOUNCED SOON</h3>
-                    <a href={`#${styles.events}`}>VIEW DATES</a>
+                    <h3>NEXT SHOW WILL BE ANNOUNCED SOON!</h3>
+                    <GO to={`${styles.events}`} smooth={true} duration={100} className={hoverClick}>VIEW DATES</GO>                    
                   </div>
                 </div>
               </header>
@@ -93,46 +103,52 @@ const HomeView = (props) => {
               </section>
 
               <section id={styles.events}>
-                  <h2>TOUR DATES</h2>
-                  <table>
-                      {
-                        props.tours != undefined ? (
-                          <>
-                            {
-                              props.tours.map((e, index) => (
-                                <tbody key={index}>
-                                  {
-                                    e.data != undefined ? (
-                                      <>
-                                        {
-                                          e.data.map((el, index) => (
-                                            <tr key={index}>
-                                                <td>{el.header}</td>
-                                                <th>{el.value}</th>
-                                            </tr>
-                                          ))
-                                        }
-                                        <tr>
-                                          <td>NORMAL</td>
-                                          <th>SOLD OUT</th>
-                                        </tr>
-                                        <tr>
-                                          <td>FAN CLUB</td>
-                                          <th>SOLD OUT</th>
-                                        </tr>
-                                        <tr>
-                                          <td>VIP TICKETS</td>
-                                          <th>SOLD OUT</th>
-                                        </tr>
-                                      </>
-                                    ): (<></>)
-                                  }
-                                </tbody>))
-                            }
-                          </>
-                        ) : (undefined)
-                      }
-                  </table>
+                  <h2 className={props.done ? "border-green-500": (props.done == undefined ? "border-yellow-400":"border-red-500")}>TOUR DATES</h2>
+                  {
+                    props.tours != undefined && props.tours.length != 0 ? (
+                      <table>
+                        {
+                          props.tours.map((data, index) => (
+                            <tbody key={index}>
+                              {
+                                <>
+                                  <tr>
+                                      <td>{data.weekday.toUpperCase()}</td>
+                                      <th>{data.month.slice(0, 3)} {data.day}</th>
+                                  </tr>
+                                  <tr>
+                                      <td>{data.city.toUpperCase()}, {data.country.toUpperCase()}</td>
+                                      <th>{data.location.toUpperCase()}</th>
+                                  </tr>
+                                  <tr>
+                                    <td>NORMAL</td>
+                                    {!data.normal ? 
+                                      <th>SOLD OUT</th>:
+                                      <th><button onClick={() => props.handleBuyTicket(data.normal, index, "normal")}>IN STOCK</button></th>
+                                    }
+                                  </tr>
+                                  <tr>
+                                    <td>FAN CLUB</td>
+                                    {!data.fan ? 
+                                      <th>SOLD OUT</th>:
+                                      <th><button onClick={() => props.handleBuyTicket(data.fan, index, "fan")}>IN STOCK</button></th>
+                                    }
+                                  </tr>
+                                  <tr>
+                                    <td>VIP TICKETS</td>
+                                    {!data.vip ? 
+                                      <th>SOLD OUT</th>:
+                                      <th><button onClick={() => props.handleBuyTicket(data.vip, index, "vip")}>IN STOCK</button></th>
+                                    }
+                                  </tr>
+                                </>
+                              }
+                            </tbody>)
+                          )
+                        }
+                      </table>
+                    ) : (<div className={styles.errorEvent}>Status: server unavailable due to ongoing maintenance...</div>)
+                  }
               </section>
               <section id={styles.media}>
                   <div>
@@ -148,27 +164,27 @@ const HomeView = (props) => {
               <form action="" method="post">
                   <div>
                     <label htmlFor="name">Name</label>
-                    <input type="text" id="name" autoComplete="off" name="name" required/>
+                    <input type="text" id="name" autoComplete="off" name="name" required disabled={!props.emailStatus}/>
                   </div>
                   <div>
                     <div>
                       <label htmlFor="email">Email</label>
-                      <input type="email" id="email" autoComplete="off" name="email" required />
+                      <input type="email" id="email" autoComplete="off" name="email" required disabled={!props.emailStatus}/>
                     </div>
                     <div>
                       <label htmlFor="tel">Phone</label>
-                      <input type="tel" id="tel" autoComplete="off" name="tel" required />
+                      <input type="tel" id="tel" autoComplete="off" name="tel" required disabled={!props.emailStatus}/>
                     </div>
                   </div>
                   <div>
                     <label htmlFor="enterprise">Enterprise</label>
-                    <input type="text" id="enterprise" autoComplete="off" name="enterprise" required/>
+                    <input type="text" id="enterprise" autoComplete="off" name="enterprise" required disabled={!props.emailStatus}/>
                   </div>
                   <div>
                     <label htmlFor="comments">Comments</label>
-                    <textarea id="comments" autoComplete="off" name="comments"></textarea>
+                    <textarea id="comments" autoComplete="off" name="comments" disabled={!props.emailStatus}></textarea>
                   </div>
-                  <input type="submit" value="Submit" />
+                  <input type="submit" value="Submit" disabled={!props.emailStatus}/>
               </form>
               <div>
                 <FontAwesomeIcon icon={faXTwitter} />
