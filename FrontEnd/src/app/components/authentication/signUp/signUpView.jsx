@@ -25,7 +25,7 @@ const SignUpView = (props) => {
                     </div>
                     <div>
                       <label>bornDate</label>
-                      <input type="date" value={props.auth.user.bornDate || ""}  name="bornDate" onChange={props.handleAuth}/>
+                      <input className="w-full" type="date" value={props.auth.user.bornDate || ""}  name="bornDate" onChange={props.handleAuth}/>
                     </div>
                     <div>
                       <label>phone</label>

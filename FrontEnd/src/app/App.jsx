@@ -13,11 +13,12 @@ function App() {
   const userRx = useSelector(state => state.usuarioRedux)
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-  const timing = 0;
+  const timing = 1;
 
   useEffect(() => {
     authService.isLoggedIn()
       .then((it) => {
+        console.log(it)
         const user = { ...userRx, isLoggedIn: it.isLoggedIn };
         dispatch(setUser({ ...user }));
         if (it.isLoggedIn) {
@@ -28,6 +29,7 @@ function App() {
         }
       })
       .catch(async (_) => {
+        console.log("Not ok")
         await sleep(timing)
         setLoading(false);
       })

@@ -499,7 +499,7 @@ footer > :last-child > * {
 
     #events table tbody > tr:nth-child(2) ~ *  {
         @apply w-[150px]
-    }
+    }    
 }
 
 @media screen and (max-width: 855px){
@@ -507,6 +507,10 @@ footer > :last-child > * {
     #events tr, th, td {
         font-size: clamp(12px, 2.2vw, 30px) !important;
         width: fit-content;
+    }
+
+    #events table th > button:hover{
+        font-size: 15px;
     }
 }
 
@@ -533,6 +537,12 @@ footer > :last-child > * {
 
     footer > :last-child {
         @apply w-[30rem]
+    }
+}
+
+@media screen and (max-width: 730px){    
+    #events table th > button:hover{
+        font-size: 14px;
     }
 }
 

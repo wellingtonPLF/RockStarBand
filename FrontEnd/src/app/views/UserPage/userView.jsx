@@ -26,20 +26,27 @@ const UserView = (props) => {
                   <ul>
                     <li>Status: <span style={{color: props.user.status ? "limegreen" : "red"}}>{props.user.status ? "Online" : "Offline"}</span></li>
                     <li>Location: {props.user.location}</li>
-                    <li>@{props.user.link}</li>
-                    <li id={styles.logout} onClick={props.logout}>Logout</li>
+                    <li>
+                      <div>@{props.user.link}</div>
+                      <div id={styles.logout} onClick={props.logout}>Logout</div>
+                    </li>
+                    
                   </ul>
                 </div>
-                <div id={styles.tickets} style={{height: props.tickets.length == 0 ? "auto" : "38vh", backgroundColor: props.tickets.length == 0 ? "#111113" : "#212125"}}>
-                  {props.tickets.length ==0 ? <div>Nenhum ticket encontrado!</div>: 
+                <div id={styles.tickets} className={`${props.tickets.length == 0 ? "h-[10vh] !bg-[#111113] justify-center items-center" : "h-[38vh] !bg-[#212125]"}`}>
+                  {props.tickets.length ==0 ? <div className="w-full justify-center text-white">Nenhum ticket encontrado!</div>: 
                     props.tickets.map((ticket, index) => (
                       <div key={index}>
-                        <div>Local: {ticket.local}</div>
-                        <div>Tipo: {ticket.type}</div>
-                        <div>Data da compra: {ticket.date_buy}</div>
-                        <div>Período: {ticket.date_event_initial} - {ticket.date_event}</div>
-                        <div>Valor/ticket: {ticket.value_per_ticket}</div>
-                        <div>Quantidade: {ticket.qnt}</div>
+                        <div>
+                          <div>Local: {ticket.local}</div>
+                          <div>Tipo: {ticket.type}</div>
+                          <div>Data da compra: {ticket.date_buy}</div>
+                        </div>
+                        <div>
+                          <div>Período: {ticket.date_event_initial} - {ticket.date_event}</div>
+                          <div>Valor/ticket: {ticket.value_per_ticket}</div>
+                          <div>Quantidade: {ticket.qnt}</div>
+                        </div>
                       </div>
                     ))
                   }                  

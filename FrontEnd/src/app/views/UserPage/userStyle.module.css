@@ -30,7 +30,7 @@
 }
 
 #userPage > div {
-    @apply h-[85%]
+    @apply h-[85%] w-[80vw] min-w-[285px]
 }
 
 #info {
@@ -41,11 +41,9 @@
 
 #userImg{
     background-image: url("imgs/profile.png");
-    width: 230px;
-    height: 230px;
     background-repeat: no-repeat;
     background-size: cover;
-    @apply rounded-full
+    @apply rounded-full w-[40vw] h-[40vw] max-w-[230px] max-h-[230px] min-w-[150px] min-h-[150px] 
 }
 
 #borderImg {
@@ -63,17 +61,29 @@
 #options {
     background-color: #212125;
     color: white;
-    @apply  w-[80vw] flex justify-center items-center h-[9%] my-4
+    @apply flex justify-center items-center h-[9%] my-4 rounded-md
 }
 
 #options > ul{
-    @apply w-96 flex justify-around font-rock
+    @apply flex justify-around font-rock
+}
+
+#options > ul > li{
+    @apply pl-5
+}
+
+#options > ul > li:last-child{
+    @apply flex text-start
+}
+
+#options > ul > li:last-child > *:last-child{
+    @apply pl-5 pr-5
 }
 
 #tickets {
     background-color: #212125;
     overflow-y: auto;
-    @apply flex flex-col items-center font-bold
+    @apply flex flex-col items-center font-bold min-w-[auto] rounded-b-md
 }
 
 #tickets > :first-child {
@@ -81,9 +91,17 @@
 }
 
 #tickets > * {
-    background-color: #111113;
+    @apply w-[100%]  mb-4 flex h-auto
+}
+
+#tickets > div > * {
     color: white;
-    @apply w-[97%] min-h-[52px] mb-4 items-center pl-5 flex justify-around
+    @apply mb-4 flex justify-around h-full items-center
+}
+
+#tickets > div > * > * {
+    background-color: #111113;
+    @apply min-h-[52px] flex items-center w-[250px] pl-5 h-full
 }
 
 #logout {
@@ -91,4 +109,25 @@
     cursor: pointer;
     text-decoration: underline;
     text-decoration-thickness: 2px;
+}
+
+
+@media screen and (max-width: 539px) {
+    #options > ul > li:last-child{
+        @apply flex-col pl-5 pr-5
+    }
+
+    #options > ul > li:last-child {
+        @apply !pl-5
+    }
+
+    #options > ul > li:last-child > *:last-child{
+        @apply text-start p-0
+    }
+}
+
+@media screen and (max-width: 409px) {
+    #options > ul > li:last-child{
+        @apply flex-col pl-0 pr-5
+    }
 }
