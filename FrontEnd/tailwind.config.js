@@ -25,7 +25,10 @@ export default {
       margin: {
         '5%': '5%',
         '15vw': '15vw'
-      }
+      },
+      screens: {
+        'own': '730px'
+      },
     },
   },
   plugins: [

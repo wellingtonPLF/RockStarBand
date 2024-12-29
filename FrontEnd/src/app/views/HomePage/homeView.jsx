@@ -1,14 +1,16 @@
 import styles from "./homeStyle.module.css"
 import {faFacebook, faXTwitter, faYoutube, faInstagram, faTiktok} from "@fortawesome/free-brands-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Link as GO } from 'react-scroll';
+import DropDownView from "../../components/dropdown-menu/dropdownView";
 
 const HomeView = (props) => {
   const bgColor = (props.scrollPosition != 0)? "bg-red-500": ""
   const hoverClick = (props.scrollPosition != 0)? "hover:text-bluegray": ""
+  const hiddenTicket = "!hidden own:!flex"
 
   useEffect(() => {
   }, [])
@@ -27,10 +29,13 @@ const HomeView = (props) => {
                       </ul>
                       </Link> 
                     ) : 
-                      <Link to="/setHost" className="flex w-[105px] ml-[8vw]" >Server Access</Link> 
+                      <Link to="/setHost" className={"flex w-[105px] ml-[8vw]" + ` ${hoverClick}`} >Server Access</Link> 
                     }
                   </div>
-                  <nav>
+                  <nav className="mr-[8vw] md:hidden flex h-full">
+                    <DropDownView />
+                  </nav>
+                  <nav className="md:flex">
                     <ul>
                       <GO to="home" smooth={true} duration={100} className={hoverClick}>Home</GO>
                       <GO to={`${styles.music}`} smooth={true} duration={100} className={hoverClick}>Music</GO>
@@ -103,50 +108,63 @@ const HomeView = (props) => {
               </section>
 
               <section id={styles.events}>
-                  <h2 className={props.done ? "border-green-500": (props.done == undefined ? "border-yellow-400":"border-red-500")}>TOUR DATES</h2>
+                  <div>
+                    <h2 className={`${props.done ? "border-green-500": (props.done == undefined ? "border-yellow-400":"border-red-500")}`}>TOUR DATES</h2>
+                  </div>
                   {
                     props.tours != undefined && props.tours.length != 0 ? (
-                      <table>
-                        {
-                          props.tours.map((data, index) => (
-                            <tbody key={index}>
-                              {
-                                <>
-                                  <tr>
-                                      <td>{data.weekday.toUpperCase()}</td>
-                                      <th>{data.month.slice(0, 3)} {data.day}</th>
-                                  </tr>
-                                  <tr>
-                                      <td>{data.city.toUpperCase()}, {data.country.toUpperCase()}</td>
-                                      <th>{data.location.toUpperCase()}</th>
-                                  </tr>
-                                  <tr>
-                                    <td>NORMAL</td>
-                                    {!data.normal ? 
-                                      <th>SOLD OUT</th>:
-                                      <th><button onClick={() => props.handleBuyTicket(data.normal, index, "normal")}>IN STOCK</button></th>
-                                    }
-                                  </tr>
-                                  <tr>
-                                    <td>FAN CLUB</td>
-                                    {!data.fan ? 
-                                      <th>SOLD OUT</th>:
-                                      <th><button onClick={() => props.handleBuyTicket(data.fan, index, "fan")}>IN STOCK</button></th>
-                                    }
-                                  </tr>
-                                  <tr>
-                                    <td>VIP TICKETS</td>
-                                    {!data.vip ? 
-                                      <th>SOLD OUT</th>:
-                                      <th><button onClick={() => props.handleBuyTicket(data.vip, index, "vip")}>IN STOCK</button></th>
-                                    }
-                                  </tr>
-                                </>
-                              }
-                            </tbody>)
-                          )
-                        }
-                      </table>
+                      <div className="w-fit flex flex-col items-end">
+                        <div id="arrows" className="own:hidden flex text-sm mr-[7vw] pt-2 text-white">
+                          <button onClick={() => {props.handleSetChosed(-1)}}>
+                            <FontAwesomeIcon icon={faChevronLeft}/>
+                          </button>
+                          <button onClick={() => {props.handleSetChosed(+1)}} className="ml-10">
+                            <FontAwesomeIcon icon={faChevronRight}/>
+                          </button>
+                        </div>
+                        <table className="relative">
+                          {
+                            props.tours.map((data, index) => (
+                              <tbody key={index}>
+                                
+                                {
+                                  <>
+                                    <tr>
+                                        <td>{data.weekday.toUpperCase()}</td>
+                                        <th>{data.month.slice(0, 3)} {data.day}</th>
+                                    </tr>
+                                    <tr>
+                                        <td>{data.city.toUpperCase()}, {data.country.toUpperCase()}</td>
+                                        <th>{data.location.toUpperCase()}</th>
+                                    </tr>
+                                    <tr className={props.chosed == 1 ? "":hiddenTicket}>
+                                      <td>NORMAL</td>
+                                      {!data.normal ? 
+                                        <th>SOLD OUT</th>:
+                                        <th><button onClick={() => props.handleBuyTicket(data.normal, index, "normal")}>IN STOCK</button></th>
+                                      }
+                                    </tr>
+                                    <tr className={props.chosed == 2 ? "":hiddenTicket}>
+                                      <td>FAN CLUB</td>
+                                      {!data.fan ? 
+                                        <th>SOLD OUT</th>:
+                                        <th><button onClick={() => props.handleBuyTicket(data.fan, index, "fan")}>IN STOCK</button></th>
+                                      }
+                                    </tr>
+                                    <tr className={props.chosed == 3 ? "":hiddenTicket}>
+                                      <td>VIP TICKETS</td>
+                                      {!data.vip ? 
+                                        <th>SOLD OUT</th>:
+                                        <th><button onClick={() => props.handleBuyTicket(data.vip, index, "vip")}>IN STOCK</button></th>
+                                      }
+                                    </tr>
+                                  </>
+                                }
+                              </tbody>)
+                            )
+                          }
+                        </table>
+                      </div>
                     ) : (<div className={styles.errorEvent}>Status: server unavailable due to ongoing maintenance...</div>)
                   }
               </section>
@@ -187,11 +205,11 @@ const HomeView = (props) => {
                   <input type="submit" value="Submit" disabled={!props.emailStatus}/>
               </form>
               <div>
-                <FontAwesomeIcon icon={faXTwitter} />
-                <FontAwesomeIcon icon={faYoutube} />
-                <FontAwesomeIcon icon={faInstagram} />
                 <FontAwesomeIcon icon={faTiktok} />
                 <FontAwesomeIcon icon={faFacebook} />
+                <FontAwesomeIcon icon={faYoutube} />
+                <FontAwesomeIcon icon={faInstagram} />
+                <FontAwesomeIcon icon={faXTwitter} />
               </div>
             </footer>
           </div>

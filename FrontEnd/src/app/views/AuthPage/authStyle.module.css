@@ -3,11 +3,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     
-    @apply flex justify-center h-[100vh]
+    @apply flex justify-center h-full min-h-[100vh]
 }
 
 #authPage > :first-child {
-    @apply w-full h-full pl-96 text-black bg-white bg-opacity-80 flex items-center justify-center pb-24
+    @apply w-full min-h-[50vh] pr-10 text-black bg-white bg-opacity-80 flex items-center justify-end pb-24
 }
 
 #authPage > :first-child > div {
@@ -15,7 +15,7 @@
 }
 
 #authPage > :nth-child(2) {
-    @apply w-full h-full pr-96 bg-red-500 bg-opacity-70 flex items-center justify-center pb-24
+    @apply w-full min-h-[50vh] pl-10 bg-red-500 bg-opacity-70 flex items-start justify-center pb-24
 }
 
 #authPage > :nth-child(2) > div {
@@ -36,4 +36,19 @@
 
 #oAuth button {
     @apply cursor-not-allowed
+}
+
+
+@media screen and (max-width: 790px){
+    #authPage {
+        flex-direction: column;
+    }
+
+    #authPage > :first-child {
+        @apply justify-center p-0 pt-16 pb-8
+    }
+
+    #authPage > :last-child {
+        @apply p-0 items-center pb-10 pt-5 justify-start bg-transparent
+    }
 }

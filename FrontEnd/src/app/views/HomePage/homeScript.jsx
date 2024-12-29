@@ -9,6 +9,7 @@ import { sleep } from '../../shared/utils/general.utils';
 const HomeScript = () => {
     const emailEnabled = false;
     const [scrollPosition, setScrollPosition] = useState(0)
+    const [chosed, setChosed] = useState(1)
 
     const albums = [
         { id: 1, name: "Album 1°", img: "https://images.unsplash.com/photo-1603652339750-18328e625af7?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"},
@@ -49,8 +50,23 @@ const HomeScript = () => {
             }
         ).catch((e) => {
             setDone(false);
-            events[index][ticketType] = undefined;            
+            if (userRx.isLoggedIn) {
+                events[index][ticketType] = undefined;            
+            }
+            else {
+                console.log("user is not logged in...")
+            }
         });
+    }
+
+    const handleSetChosed = (value) => {
+        let result = chosed + value;
+        if (result == 4) {
+            result = 3
+        } else if (result == 0) {
+            result = 1
+        }
+        setChosed(result)
     }
 
     const handleScrollPosition = (value) => {
@@ -77,7 +93,8 @@ const HomeScript = () => {
     return (
         <>
             <HomeView music={albums} members={group} isLogged={userRx.isLoggedIn} emailStatus={emailEnabled} done={done}
-            tours={events} media={pictures} scrollPosition={scrollPosition} handleBuyTicket={handleBuyTicket}/>
+            tours={events} media={pictures} scrollPosition={scrollPosition} handleBuyTicket={handleBuyTicket}
+            chosed={chosed} handleSetChosed={handleSetChosed}/>
         </>
     );
 };

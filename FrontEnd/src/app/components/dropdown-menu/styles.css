@@ -1,0 +1,39 @@
+.selected-option {
+    height: 100%;
+    padding-bottom: 1px;
+    line-height: 55px;
+}
+
+.custom-select {
+    position: relative;
+    width: 100px;
+    line-height: 40px;
+    text-align: center;
+    @apply hover:bg-red-500
+}
+
+.options {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 0 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    color: black;
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+  
+.custom-select:hover .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.options a {
+    width: 100%;
+}

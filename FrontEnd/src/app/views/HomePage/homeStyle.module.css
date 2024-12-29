@@ -67,6 +67,10 @@ header > div:last-child {
     hover:text-black
 }
 
+nav {
+    display: none;
+}
+
 nav ul {
     @apply flex justify-end pr-4
 }
@@ -97,7 +101,8 @@ main section {
 
 .errorEvent {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    @apply flex items-center justify-center absolute top-[45%] text-3xl font-rock
+    padding: 0px 50px;
+    @apply flex text-center items-center justify-center absolute top-[45%] text-3xl font-rock text-[4vh]
 }
 
 /* ------------------------------------------------------------ */
@@ -280,37 +285,45 @@ main section {
     text-white 
     flex
     flex-col
-    justify-between
+    justify-start
     items-center
     relative
 }
 
+#events > :first-child {
+    @apply h-1/4 flex justify-center items-center
+}
+
 #events h2 {
     @apply font-bold
-    flex
-    items-end
     font-rock   
     pb-2
+    mt-20
+    h-fit
     text-2xl
-    h-1/5
     w-fit
     border-b-4    
 }
 
 #events table {
-    @apply m-auto mt-12
+    @apply pt-10 
 }
 
 #events table tbody {
     @apply flex m-2 p-5
 }
 
+#events table tbody:first-child {
+    @apply pt-0
+}
+
 #events table tbody > tr  {
-    @apply flex flex-col mr-5 text-left
+    @apply flex flex-col mr-5 text-start
 }
 
 #events table tbody > tr:nth-child(2) ~ *  {
-    @apply flex flex-col w-[150px] h-[30px] text-left
+    width: fit-content;
+    @apply flex flex-col h-[30px] text-start
 }
 
 #events table tbody > tr:first-child {
@@ -318,15 +331,15 @@ main section {
 }
 
 #events table td {
-    @apply text-gray-400 text-sm font-bold
+    @apply text-gray-400 text-sm font-bold text-start
 }
 
 #events table th {
-    @apply text-2xl font-alkatra
+    @apply text-2xl font-alkatra text-start
 }
 
 #events table th > button{
-    @apply text-red-300
+    @apply text-red-300 text-start
 }
 
 #events table th > button:hover{
@@ -407,6 +420,7 @@ main section {
 
 /* ------------------------------------------------------------ */
 footer {
+    overflow-y: auto;
     @apply 
     flex
     flex-col
@@ -480,43 +494,19 @@ footer > :last-child > * {
     @apply text-3xl rounded-full p-6 border-b-4 border-red-500 cursor-not-allowed
 }
 
-@media screen and (max-width: 812px){
-    #events h2 {
-        @apply 
-        pb-[0.7vw]
-        text-[2.8vw]
-        border-b-[0.5vw] 
+
+@media screen and (min-width: 854px){
+
+    #events table tbody > tr:nth-child(2) ~ *  {
+        @apply w-[150px]
     }
-    
-    #events table {
-        @apply 
-        mt-[5vw]
-    }
-    
-    #events table tbody {
-        @apply 
-        m-[0.3vw]
-        p-[3.3vw]
-    }
-    
-    #events table tbody > tr  {
-        @apply 
-        mr-[3.3vw]
-    }
-    
-    #events table tbody > tr:first-child {
-        @apply 
-        min-w-[11vw]
-    }
-    
-    #events table td {
-        @apply 
-        text-[1.6vw]
-    }
-    
-    #events table th {
-        @apply 
-        text-[2.8vw]
+}
+
+@media screen and (max-width: 855px){
+
+    #events tr, th, td {
+        font-size: clamp(12px, 2.2vw, 30px) !important;
+        width: fit-content;
     }
 }
 
@@ -547,13 +537,13 @@ footer > :last-child > * {
 }
 
 @media screen and (max-width: 600px){    
-    
-    header > div > a{
-        display: none;
+
+    #events table tbody {
+        @apply flex m-5 p-0
     }
 
-    header > div:first-child {
-        @apply justify-center
+    header > div > a{
+        display: none;
     }
     
     #annoucement > h1 {
@@ -638,9 +628,19 @@ footer > :last-child > * {
     /* ------------------------------------------------------------------------------------------------------------------------ */
 }
 
-@media screen and (max-width: 425px){
+
+@media screen and (max-width: 385px) {
+    #events table th {
+        @apply text-sm
+    }
+}
+
+@media screen and (max-width: 350px) {
+    footer > form {
+        @apply m-0
+    }
+
     footer > :last-child {
-        @apply 
-        flex-col
+        @apply flex-col mt-[10px]
     }
 }

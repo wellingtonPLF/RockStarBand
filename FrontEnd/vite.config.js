@@ -13,7 +13,8 @@ export default defineConfig({
       '@enums': path.resolve(__dirname, 'src/app/shared/enums'),
       '@redux': path.resolve(__dirname, 'src/app/shared/redux'),
       '@models': path.resolve(__dirname, 'src/app/shared/models'),
-      '@services': path.resolve(__dirname, 'src/app/shared/services')
+      '@services': path.resolve(__dirname, 'src/app/shared/services'),
+      '@views': path.resolve(__dirname, 'src/app/views'),
     },
   },
 });
