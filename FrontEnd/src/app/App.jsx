@@ -18,7 +18,6 @@ function App() {
   useEffect(() => {
     authService.isLoggedIn()
       .then((it) => {
-        console.log(it)
         const user = { ...userRx, isLoggedIn: it.isLoggedIn };
         dispatch(setUser({ ...user }));
         if (it.isLoggedIn) {

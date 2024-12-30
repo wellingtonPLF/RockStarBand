@@ -42,7 +42,9 @@
 #userImg{
     background-image: url("imgs/profile.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 300%;
+    background-position: center;
+    /* background-size: cover; */
     @apply rounded-full w-[40vw] h-[40vw] max-w-[230px] max-h-[230px] min-w-[150px] min-h-[150px] 
 }
 
