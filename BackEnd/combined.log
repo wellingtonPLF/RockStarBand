@@ -1,0 +1,401 @@
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at JwtUtil.extractSubject at AuthService.isLoggedIn from AuthController.isLoggedIn => Expired Access Token! {"stack":[null]}
+error: Error at AuthService.logout at process.processTicksAndRejections from AuthController.logout => Error at AuthService logout => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error Invalid `this.database.create /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/auth.repository.ts:82:46  79 } 80 81 try { → 82     const auth = await this.database.create Unique constraint failed on the fields: at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Error at AuthRepository create prisma => Error at AuthRepository create Prisma=> 
+Invalid `this.database.create()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/auth.repository.ts:82:46
+
+  79 }
+  80 
+  81 try {
+→ 82     const auth = await this.database.create(
+Unique constraint failed on the fields: (`auth_id`) {"stack":[null]}
+error: Error Invalid `this.database.create /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/user.repository.ts:52:42  49 } 50 51 async insert → 52     const user = await this.database.create Unique constraint failed on the fields: at UserService.insert from AuthController.authInsert => Error at UserService insert => Error at UserRepository insert Prisma=> 
+Invalid `this.database.create()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/user.repository.ts:52:42
+
+  49 }
+  50 
+  51 async insert({ nickName, phone, bornDate, auth_id }: any): Promise<any> {
+→ 52     const user = await this.database.create(
+Unique constraint failed on the fields: (`user_id`) {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email xxx@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.logout at process.processTicksAndRejections from AuthController.logout => Error at AuthService logout => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error Invalid `this.database.create /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/auth.repository.ts:82:46  79 } 80 81 try { → 82     const auth = await this.database.create Unique constraint failed on the fields: at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Error at AuthRepository create prisma => Error at AuthRepository create Prisma=> 
+Invalid `this.database.create()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/auth.repository.ts:82:46
+
+  79 }
+  80 
+  81 try {
+→ 82     const auth = await this.database.create(
+Unique constraint failed on the fields: (`auth_id`) {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Senha inválida! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email x@gmail.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email x123@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email x123@email.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Erro de Autenticação: Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Senha inválida! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => O Email well@gmail.com já esta cadastrado no sistema. {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at AuthService.logout from AuthController.logout => Error at AuthService logout => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error Invalid `prisma.$queryRaw   Raw query failed. Code: `42703`. Message: `column "ticket_id" does not exist` at EventService.getAllValid from EventTicketsController.getAllEvents => Error at EventService getAllValid => Error At EventsRepository findAll prisma => 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `column "ticket_id" does not exist` {"stack":[null]}
+error: Error Invalid `prisma.$queryRaw   Raw query failed. Code: `42703`. Message: `column ti.ticket_id does not exist` at EventService.getUserEventsByUserId from EventTicketsController.getUserEvents => Error at EventService getUserEventsByUserId => Error At EventUserRepository getUserEventsByUserId prisma => 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `column ti.ticket_id does not exist` {"stack":[null]}
+error: Error at JSON.stringify at stringify at ServerResponse.json at ServerResponse.send from EventTicketsController.getUserEvents => Do not know how to serialize a BigInt {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error Invalid `this.database.create /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/event_user.repository.ts:76:48  73 const data: any= { 74     event_id, user_id, purchase_date, quantity: 1 75 } → 76 const events = await this.database.create data: { event_id: undefined, user_id: 1, purchase_date: new Date quantity: 1, +   tickets: { +     create: TicketsCreateWithoutTicket_userInput | TicketsUncheckedCreateWithoutTicket_userInput, +     connectOrCreate: TicketsCreateOrConnectWithoutTicket_userInput, +     connect: TicketsWhereUniqueInput +   } } })  Argument `tickets` is missing. at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error at EventUserRepository create prisma => Error at EventUserRepository create Prisma=> 
+Invalid `this.database.create()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/event_user.repository.ts:76:48
+
+  73 const data: any= {
+  74     event_id, user_id, purchase_date, quantity: 1
+  75 }
+→ 76 const events = await this.database.create({
+       data: {
+         event_id: undefined,
+         user_id: 1,
+         purchase_date: new Date("2024-12-21T13:36:45.691Z"),
+         quantity: 1,
+     +   tickets: {
+     +     create: TicketsCreateWithoutTicket_userInput | TicketsUncheckedCreateWithoutTicket_userInput,
+     +     connectOrCreate: TicketsCreateOrConnectWithoutTicket_userInput,
+     +     connect: TicketsWhereUniqueInput
+     +   }
+       }
+     })
+
+Argument `tickets` is missing. {"stack":[null]}
+error: Error Invalid `this.database.create /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:92:48  89 const data: any = { 90     ticket_id, user_id, purchase_date, quantity 91 } → 92 const events = await this.database.create Unique constraint failed on the fields: at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error at TicketUserRepository update prisma => Error at TicketUserRepository create Prisma=> 
+Invalid `this.database.create()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:92:48
+
+  89 const data: any = {
+  90     ticket_id, user_id, purchase_date, quantity
+  91 }
+→ 92 const events = await this.database.create(
+Unique constraint failed on the fields: (`ticket_id`,`user_id`,`purchase_date`) {"stack":[null]}
+error: Error Invalid `this.database.create /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:92:48  89 const data: any = { 90     ticket_id, user_id, purchase_date, quantity 91 } → 92 const events = await this.database.create Unique constraint failed on the fields: at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error at TicketUserRepository update prisma => Error at TicketUserRepository create Prisma=> 
+Invalid `this.database.create()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:92:48
+
+  89 const data: any = {
+  90     ticket_id, user_id, purchase_date, quantity
+  91 }
+→ 92 const events = await this.database.create(
+Unique constraint failed on the fields: (`ticket_id`,`user_id`,`purchase_date`) {"stack":[null]}
+error: Error Invalid `this.database.create /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:92:48  89 const data: any = { 90     ticket_id, user_id, purchase_date, quantity 91 } → 92 const events = await this.database.create Unique constraint failed on the fields: at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error at TicketUserRepository update prisma => Error at TicketUserRepository create Prisma=> 
+Invalid `this.database.create()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:92:48
+
+  89 const data: any = {
+  90     ticket_id, user_id, purchase_date, quantity
+  91 }
+→ 92 const events = await this.database.create(
+Unique constraint failed on the fields: (`ticket_id`,`user_id`,`purchase_date`) {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error Invalid `this.database.findUnique /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48  16 17 async findByObj 18     try { → 19         const result = await this.database.findUnique where: { ticket_id_user_id_purchase_date: { purchase_date: new Date user_id: 1, +     ticket_id: Int } } })  Argument `ticket_id` is missing. at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error At TicketUserRepository findByObj prisma => 
+Invalid `this.database.findUnique()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48
+
+  16 
+  17 async findByObj({ ticket_id, user_id, purchase_date }: any): Promise<any> {
+  18     try {
+→ 19         const result = await this.database.findUnique({
+               where: {
+                 ticket_id_user_id_purchase_date: {
+                   purchase_date: new Date("2024-12-21T22:27:09.814Z"),
+                   user_id: 1,
+             +     ticket_id: Int
+                 }
+               }
+             })
+
+Argument `ticket_id` is missing. {"stack":[null]}
+error: Error Invalid `this.database.findUnique /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48  16 17 async findByObj 18     try { → 19         const result = await this.database.findUnique where: { ticket_id_user_id_purchase_date: { purchase_date: new Date user_id: 1, +     ticket_id: Int } } })  Argument `ticket_id` is missing. at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error At TicketUserRepository findByObj prisma => 
+Invalid `this.database.findUnique()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48
+
+  16 
+  17 async findByObj({ ticket_id, user_id, purchase_date }: any): Promise<any> {
+  18     try {
+→ 19         const result = await this.database.findUnique({
+               where: {
+                 ticket_id_user_id_purchase_date: {
+                   purchase_date: new Date("2024-12-21T22:27:10.754Z"),
+                   user_id: 1,
+             +     ticket_id: Int
+                 }
+               }
+             })
+
+Argument `ticket_id` is missing. {"stack":[null]}
+error: Error Invalid `this.database.findUnique /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48  16 17 async findByObj 18     try { → 19         const result = await this.database.findUnique where: { ticket_id_user_id_purchase_date: { purchase_date: new Date user_id: 1, +     ticket_id: Int } } })  Argument `ticket_id` is missing. at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error At TicketUserRepository findByObj prisma => 
+Invalid `this.database.findUnique()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48
+
+  16 
+  17 async findByObj({ ticket_id, user_id, purchase_date }: any): Promise<any> {
+  18     try {
+→ 19         const result = await this.database.findUnique({
+               where: {
+                 ticket_id_user_id_purchase_date: {
+                   purchase_date: new Date("2024-12-21T22:27:53.141Z"),
+                   user_id: 1,
+             +     ticket_id: Int
+                 }
+               }
+             })
+
+Argument `ticket_id` is missing. {"stack":[null]}
+error: Error Invalid `this.database.findUnique /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48  16 17 async findByObj 18     try { → 19         const result = await this.database.findUnique where: { ticket_id_user_id_purchase_date: { purchase_date: new Date user_id: 1, +     ticket_id: Int } } })  Argument `ticket_id` is missing. at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error At TicketUserRepository findByObj prisma => 
+Invalid `this.database.findUnique()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48
+
+  16 
+  17 async findByObj({ ticket_id, user_id, purchase_date }: any): Promise<any> {
+  18     try {
+→ 19         const result = await this.database.findUnique({
+               where: {
+                 ticket_id_user_id_purchase_date: {
+                   purchase_date: new Date("2024-12-21T22:28:03.289Z"),
+                   user_id: 1,
+             +     ticket_id: Int
+                 }
+               }
+             })
+
+Argument `ticket_id` is missing. {"stack":[null]}
+error: Error Invalid `this.database.findUnique /home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48  16 17 async findByObj 18     try { → 19         const result = await this.database.findUnique where: { ticket_id_user_id_purchase_date: { purchase_date: new Date user_id: 1, +     ticket_id: Int } } })  Argument `ticket_id` is missing. at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Error At TicketUserRepository findByObj prisma => 
+Invalid `this.database.findUnique()` invocation in
+/home/wellingtonplf/Desktop/_Personal_Work/super-visionary-backend/src/repositories/ticket_user.repository.ts:19:48
+
+  16 
+  17 async findByObj({ ticket_id, user_id, purchase_date }: any): Promise<any> {
+  18     try {
+→ 19         const result = await this.database.findUnique({
+               where: {
+                 ticket_id_user_id_purchase_date: {
+                   purchase_date: new Date("2024-12-21T22:28:24.443Z"),
+                   user_id: 1,
+             +     ticket_id: Int
+                 }
+               }
+             })
+
+Argument `ticket_id` is missing. {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error Invalid `prisma.$queryRaw   Raw query failed. Code: `42703`. Message: `column tu.event_initial_date does not exist` at EventService.getUserEventsByUserId from EventTicketsController.getUserEvents => Error at EventService getUserEventsByUserId => Error At TicketUserRepository getUserEventsByUserId prisma => 
+Invalid `prisma.$queryRaw()` invocation:
+
+
+Raw query failed. Code: `42703`. Message: `column tu.event_initial_date does not exist` {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Username ou Email não encontrado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at EventService.insertUserEvent from EventTicketsController.insertEventTicket => Error at EventService insertUserEvent => Ticket esgotado! {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.insertEventTicket => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser at process.processTicksAndRejections from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at AuthService.insert from AuthController.authInsert => Error at AuthService insert => Email inválido! {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at AuthService.logout from AuthController.logout => Error at AuthService logout => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at AuthService.authenticate from AuthController.authentication => Error at AuthService authenticate => Senha Incorreta, tente novamente. {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}
+error: Error at UserService.getAuthenticatedUser from EventTicketsController.getUserEvents => Error at UserService GetAuthenticatedUser => Error at TokenService findByToken => User is not logged! Token Invalido... {"stack":[null]}

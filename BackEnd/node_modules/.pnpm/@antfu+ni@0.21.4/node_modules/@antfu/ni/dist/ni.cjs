@@ -1,0 +1,24 @@
+'use strict';
+
+const runner = require('./shared/ni.724489bd.cjs');
+require('node:path');
+require('readline');
+require('events');
+require('node:buffer');
+require('node:child_process');
+require('node:process');
+require('child_process');
+require('path');
+require('fs');
+require('node:url');
+require('node:os');
+require('assert');
+require('node:fs');
+require('buffer');
+require('stream');
+require('util');
+require('node:util');
+require('os');
+require('tty');
+
+runner.runCli(runner.parseNi);

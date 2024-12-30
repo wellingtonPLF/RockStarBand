@@ -1,0 +1,117 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Auth_roles {
+  auth_id Int
+  role_id Int
+  auths   Auths @relation(fields: [auth_id], references: [id])
+  roles   Roles @relation(fields: [role_id], references: [id])
+
+  @@id([auth_id, role_id])
+  @@map("auth_roles")
+}
+
+model Auths {
+  id         Int          @id @default(autoincrement())
+  username   String
+  email      String
+  active     Boolean
+  password   String
+  auth_roles Auth_roles[]
+  tokens     Tokens?
+  users      Users?
+
+  @@map("auths")
+}
+
+model Events {
+  id                 BigInt    @id(map: "pk_event_id")
+  event_initial_date DateTime? @db.Date
+  event_end_date     DateTime? @db.Date
+  location           String?   @db.VarChar(255)
+  city               String?   @db.VarChar(255)
+  country            String?   @db.VarChar(2)
+  tickets            Tickets[]
+
+  @@map("events")
+}
+
+model Roles {
+  id         Int          @id @default(3)
+  roleName   RoleNames
+  auth_roles Auth_roles[]
+
+  @@map("roles")
+}
+
+model Ticket_type {
+  id          Int       @id(map: "pk_ticket_type")
+  description String?   @db.VarChar(255)
+  acronym     String?   @db.VarChar(10)
+  tickets     Tickets[]
+
+  @@map("ticket_type")
+}
+
+model Ticket_user {
+  ticket_id     Int
+  user_id       Int
+  purchase_date DateTime @db.Date
+  quantity      Int?
+  tickets       Tickets  @relation(fields: [ticket_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_user_ticket_id")
+
+  @@id([ticket_id, user_id, purchase_date], map: "pk_user_ticket")
+  @@map("ticket_user")
+}
+
+model Tickets {
+  id             Int           @id(map: "pk_ticket_id")
+  value          Decimal?      @db.Decimal
+  event_id       BigInt?
+  ticket_type_id Int?
+  ticket_user    Ticket_user[]
+  events         Events?       @relation(fields: [event_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_ticket_event")
+  ticket_type    Ticket_type?  @relation(fields: [ticket_type_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_ticket_type")
+
+  @@map("tickets")
+}
+
+model Tokens {
+  id      Int    @id @default(autoincrement())
+  key     String
+  auth_id Int    @unique
+  auths   Auths  @relation(fields: [auth_id], references: [id])
+
+  @@map("tokens")
+}
+
+model Users {
+  id       Int      @id @default(autoincrement())
+  nickName String
+  phone    String
+  active   Boolean
+  bornDate DateTime
+  auth_id  Int      @unique
+  auths    Auths    @relation(fields: [auth_id], references: [id])
+
+  @@map("users")
+}
+
+model Countries {
+  id           Int     @id @default(autoincrement())
+  country_name String? @db.VarChar(100)
+  acronym      String? @db.Char(2)
+
+  @@map("countries")
+}
+
+enum RoleNames {
+  ROLE_ADMIN
+  ROLE_USER
+}

@@ -1,0 +1,22 @@
+import { r as runCli, i as parseNun } from './shared/ni.377238f7.mjs';
+import 'node:path';
+import 'readline';
+import 'events';
+import 'node:buffer';
+import 'node:child_process';
+import 'node:process';
+import 'child_process';
+import 'path';
+import 'fs';
+import 'node:url';
+import 'node:os';
+import 'assert';
+import 'node:fs';
+import 'buffer';
+import 'stream';
+import 'util';
+import 'node:util';
+import 'os';
+import 'tty';
+
+runCli(parseNun);
