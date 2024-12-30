@@ -13,7 +13,7 @@ function App() {
   const userRx = useSelector(state => state.usuarioRedux)
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
-  const timing = 1;
+  const timing = 3;
 
   useEffect(() => {
     authService.isLoggedIn()
