@@ -13,7 +13,7 @@ async function bootstrap() {
     const port = 3000;
     const app = await core_1.NestFactory.create(app_module_1.AppModule);
     app.use((0, cors_1.default)({
-        origin: 'http://192.168.0.14:5173',
+        origin: ["https://supervisionary.netlify.app", "http://192.168.0.14:5173", "http://localhost:5173"],
         credentials: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE']
     }));
@@ -22,7 +22,7 @@ async function bootstrap() {
         secret: 'your-secret-key',
         resave: true,
         saveUninitialized: true,
-        cookie: { secure: false }
+        cookie: { secure: true }
     }));
     await app.listen(port, "0.0.0.0", () => {
         const networkInterfaces = os_1.default.networkInterfaces();

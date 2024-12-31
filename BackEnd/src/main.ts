@@ -11,7 +11,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   app.use(cors({
-      origin: 'http://192.168.0.14:5173',
+      origin: ["https://supervisionary.netlify.app", "http://192.168.0.14:5173", "http://localhost:5173"],
       credentials: true,
       methods: ['GET', 'POST', 'PUT', 'DELETE']
   }));
@@ -20,7 +20,7 @@ async function bootstrap() {
     secret: 'your-secret-key',
     resave: true,
     saveUninitialized: true, 
-    cookie: { secure: false } // Set `secure: true` in production if using HTTPS
+    cookie: { secure: true } // Set `secure: true` in production if using HTTPS
   })); 
 
   //Running ************************************************************************
