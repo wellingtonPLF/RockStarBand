@@ -9,7 +9,7 @@ export class UserController {
         private userService: UserService
     ){}
 
-    @Get('/') 
+    @Get('/')
     async listUsers (@Req() req: Request, @Res() res: Response): Promise<void> {
         try {
             const users = await this.userService.findAll()

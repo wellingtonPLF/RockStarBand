@@ -67,6 +67,7 @@ export class UserService {
             const authID = this.jwtUtil.extractSubject(jwt.key);
             const authDB = await this.authService.findById(parseInt(authID));
             const userDB = await this.userRepository.findByAuthId(authDB.id);
+            const role: number = await this.authService.getAuthenticatedRole(request);
             const user =
             { 
                 id: userDB.id,
@@ -75,6 +76,7 @@ export class UserService {
                 email:authDB.email,
                 active: userDB.active,
                 phone: userDB.phone,
+                role,
                 auth_id: userDB.auth_id,
             }
             return user;
