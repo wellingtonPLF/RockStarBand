@@ -29,7 +29,7 @@ const HomeView = (props) => {
                       </ul>
                       </Link> 
                     ) : 
-                      <Link to="/setHost" className={"flex w-[105px] ml-[8vw]" + ` ${hoverClick}`} >Server Access</Link> 
+                      <Link to="/setHost" className={"flex w-[125px] ml-[8vw]" + ` ${hoverClick}`} >Server Access</Link> 
                     }
                   </div>
                   <nav className="mr-[8vw] md:hidden flex h-full">
@@ -48,7 +48,7 @@ const HomeView = (props) => {
                 </div>
                 <div>
                   <div id={styles.annoucement}>
-                    <h1 id={styles.year}>2023</h1>
+                    <h1 id={styles.year}>{props.bandName} {props.today.getFullYear().toString()}</h1>
                     <h3>NEXT SHOW WILL BE ANNOUNCED SOON!</h3>
                     <GO to={`${styles.events}`} smooth={true} duration={100} className={hoverClick}>VIEW DATES</GO>                    
                   </div>
@@ -61,8 +61,20 @@ const HomeView = (props) => {
                     {
                       props.music.map((element, index) => (
                         <div key={element.id}>
-                          <div>
+                          <div style={{position: 'relative'}}>
                             <img src={element.img} />
+                            {
+                              index == 3 && <>
+                                <div style={{
+                              zIndex: '1000000',
+                              top: 0,
+                              width: '14rem',
+                              height: '14rem',
+                              position: 'absolute',
+                              backgroundColor: '#3b056547'
+                            }}></div>
+                              </>
+                            }
                           </div>
                           <div>{element.name}</div>
                           <div>
@@ -85,7 +97,15 @@ const HomeView = (props) => {
                       props.members.map((e) => (
                         <div key={e.id}>
                           <div>
-                            <img src={e.img} />
+
+                            {
+                              e.img ? <>
+                                <img src={e.img} />
+                              </> : <>
+                                <div className="w-56 h-56 bg-bluegray"></div>  
+                              </>
+                            }
+                            
                           </div>
                           <div>{e.name}</div>
                           <div>{e.position}</div>
@@ -97,13 +117,13 @@ const HomeView = (props) => {
               
               <section id={styles.phase}>
                   <div>
-                    <div>
-                      "Little things makes you smile.
-                      Dance barefoot in the dark.
-                      Choose your words before you speak.
-                      Can't you see that all you've got is time."
+                    <div className="text-[2vh]">
+                      "No meu passado eu já aprendi
+                      que nem tudo tem só um motivo.
+                      Sei que me falta atenção,
+                      e sempre me esqueço de dizer adeus..."
                     </div>
-                    <div>KALAO</div>
+                    <div className="text-[1.3vh]">SONNO</div>
                   </div>
               </section>
 
@@ -172,7 +192,16 @@ const HomeView = (props) => {
                   <div>
                       {
                         props.media.map((e, index) => (
-                          <div key={index} style={{backgroundImage: `url(${e})`}}></div>
+
+                          <>
+                            {
+                              e == "" ? <>
+                                <div key={index} className="bg-bluegray"></div>
+                              </>:<>
+                              <div key={index} style={{backgroundImage: `url(${e})`}}></div> 
+                              </>
+                            }
+                          </>
                         ))
                       }
                   </div>

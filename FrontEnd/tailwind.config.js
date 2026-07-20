@@ -16,17 +16,20 @@ export default {
         alkatra: ['Alkatra', 'Arial', 'sans-serif']
       },
       textColor: {
-        bluegray: "#111111"
+        bluegray: "#15171c"
       },
       backgroundColor: {
         blueblack: "#0a0a0a",
-        bluegray: "#111111"
+        bluegray: "#15171c"
       },
       margin: {
         '5%': '5%',
         '15vw': '15vw'
       },
       screens: {
+        'own': '730px'
+      },
+      memberSize: {
         'own': '730px'
       },
     },

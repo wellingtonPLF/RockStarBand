@@ -5,6 +5,8 @@ export let protocol = 'https://'
 let baseURL = "http://192.168.0.14:3000"
 const hostname = new LocalStorageUtil().getToken('backendHostname');
 
+console.log(hostname)
+
 const api = axios.create({
   baseURL: hostname ? (hostname.includes(protocol) ? hostname : baseURL) : baseURL,
   headers: {

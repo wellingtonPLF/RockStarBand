@@ -28,8 +28,8 @@ function App() {
         }
       })
       .catch(async (_) => {
-        console.log("Not ok")
-        await sleep(timing)
+        console.log("Backend Offline!")
+        await sleep(0)
         setLoading(false);
       })
       .finally(async () => {
