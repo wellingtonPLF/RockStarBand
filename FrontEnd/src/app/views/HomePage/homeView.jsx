@@ -184,7 +184,7 @@ const HomeView = (props) => {
                           }
                         </table>
                       </div>
-                    ) : (<div className={styles.errorEvent}>Status: server unavailable due to ongoing maintenance...</div>)
+                    ) : (<div style={{lineHeight: '58px'}} className={styles.errorEvent}>Status: server unavailable due to ongoing maintenance...</div>)
                   }
               </section>
               <section id={styles.media}>
