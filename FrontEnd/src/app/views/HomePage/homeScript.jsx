@@ -12,10 +12,10 @@ const HomeScript = () => {
     const [scrollPosition, setScrollPosition] = useState(0)
     const [chosed, setChosed] = useState(1)
 
-    const bandName = '74Doses';
+    const bandName = '74°Doses';
 
     const albums = [
-        { id: 1, name: "Album 1°", img: "./imgs/image.png"},
+        { id: 1, name: "********", img: "./imgs/image.png"},
         { id: 2, name: "********", img: "./imgs/mao.png"},
         { id: 3, name: "********", img: "./imgs/tree.png"},
         { id: 4, name: "********", img: "./imgs/crab.png"}
