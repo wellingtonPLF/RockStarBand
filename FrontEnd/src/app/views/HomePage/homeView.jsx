@@ -29,7 +29,7 @@ const HomeView = (props) => {
                       </ul>
                       </Link> 
                     ) : 
-                      <Link to="/setHost" className={"flex w-[125px] ml-[8vw]" + ` ${hoverClick}`} >Server Access</Link> 
+                      <Link to="/setHost" style={{fontSize: '22px'}} className={"flex w-[125px] ml-[8vw] font-rock" + ` ${hoverClick}`} >{props.bandName}</Link> 
                     }
                   </div>
                   <nav className="mr-[8vw] md:hidden flex h-full">
@@ -48,7 +48,7 @@ const HomeView = (props) => {
                 </div>
                 <div>
                   <div id={styles.annoucement}>
-                    <h1 id={styles.year}>{props.bandName} {props.today.getFullYear().toString()}</h1>
+                    <h1 id={styles.year}>{props.today.getFullYear().toString()}</h1>
                     <h3>NEXT SHOW WILL BE ANNOUNCED SOON!</h3>
                     <GO to={`${styles.events}`} smooth={true} duration={100} className={hoverClick}>VIEW DATES</GO>                    
                   </div>
@@ -62,17 +62,16 @@ const HomeView = (props) => {
                       props.music.map((element, index) => (
                         <div key={element.id}>
                           <div style={{position: 'relative'}}>
-                            <img src={element.img} />
                             {
-                              index == 3 && <>
-                                <div style={{
-                              zIndex: '1000000',
-                              top: 0,
-                              width: '14rem',
-                              height: '14rem',
-                              position: 'absolute',
-                              backgroundColor: '#3b056547'
-                            }}></div>
+                              index == 3 ? <>
+                                <div
+                                  className={`${styles.imgMusic} w-56 h-56 bg-center bg-cover bg-no-repeat`}
+                                  style={{
+                                    backgroundImage: `linear-gradient(#3b056547, #3b056547), url("${element.img}")`,
+                                  }}
+                                />
+                              </> : <>
+                                <img className={styles.imgMusic} src={element.img} />
                               </>
                             }
                           </div>

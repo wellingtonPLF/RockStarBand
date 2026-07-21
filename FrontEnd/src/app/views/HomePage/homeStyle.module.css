@@ -149,7 +149,7 @@ main section {
     @apply overflow-hidden
 }
 
-#music img {
+.imgMusic {
     transition: transform 1s;
     will-change: transform;
     @apply
@@ -159,7 +159,7 @@ main section {
     object-cover
 }
 
-#music img:hover {
+.imgMusic:hover {
     transform: scale(1.1);
 }
 
