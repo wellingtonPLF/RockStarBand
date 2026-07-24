@@ -27,7 +27,7 @@ const HomeScript = () => {
             // name: "JIMMY IVAN", 
             name: "SONNO", 
             position: "VOCAL", 
-            img: "https://yt3.googleusercontent.com/-vD-XiiMPRgYJx6YXHB4K6_X02SuncyqTFUbAPNVcz5SflA9mh3X26xc7QoLz_Zogq5PVv5J0g=s160-c-k-c0x00ffffff-no-rj"
+            img: "https://yt3.googleusercontent.com/eAokfPhsVZpBHBr-gzaHB70gCJg0nxbS2suXDPqSQb3QQ6qHHikdzyMJclOVdmA_rTPGBjmahQ=s160-c-k-c0x00ffffff-no-rj"
         },
         {
             id: 2, 
