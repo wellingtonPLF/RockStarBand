@@ -25,7 +25,7 @@ const HomeScript = () => {
         {
             id: 1, 
             // name: "JIMMY IVAN", 
-            name: "SONNO", 
+            name: "S0NN0", 
             position: "VOCAL", 
             img: "https://yt3.googleusercontent.com/eAokfPhsVZpBHBr-gzaHB70gCJg0nxbS2suXDPqSQb3QQ6qHHikdzyMJclOVdmA_rTPGBjmahQ=s160-c-k-c0x00ffffff-no-rj"
         },
