@@ -15,10 +15,10 @@ const HomeScript = () => {
     const bandName = '74°Doses';
 
     const albums = [
-        { id: 1, name: "********", img: "./imgs/image.png"},
-        { id: 2, name: "********", img: "./imgs/my_room.png"},
-        { id: 3, name: "********", img: "./imgs/mao.png"},
-        { id: 4, name: "********", img: "./imgs/crab.png"}
+        { id: 1, name: "Meu Lamento", img: "./imgs/image.png"},
+        { id: 2, name: "Perceptível", img: "./imgs/my_room.png"},
+        { id: 3, name: "********", img: undefined},
+        { id: 4, name: "********", img: undefined}
     ];
 
     const group = [

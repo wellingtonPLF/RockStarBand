@@ -71,7 +71,14 @@ const HomeView = (props) => {
                                   }}
                                 />
                               </> : <>
-                                <img className={styles.imgMusic} src={element.img} />
+                                {
+                                  element.img ? <>
+                                    <img className={styles.imgMusic} src={element.img} />
+                                  </> : <>
+                                    <div className={`${styles.imgMusic} bg-bluegray`}></div>
+                                  </>
+                                }
+                                
                               </>
                             }
                           </div>
