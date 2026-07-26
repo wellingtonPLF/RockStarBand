@@ -223,11 +223,11 @@ const HomeView = (props) => {
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="enterprise">Enterprise</label>
+                    <label htmlFor="enterprise">Enterprise (Optional)</label>
                     <input type="text" id="enterprise" autoComplete="off" name="enterprise" required disabled={!props.emailStatus}/>
                   </div>
                   <div>
-                    <label htmlFor="comments">Comments</label>
+                    <label htmlFor="comments">Comments (Optional)</label>
                     <textarea id="comments" autoComplete="off" name="comments" disabled={!props.emailStatus}></textarea>
                   </div>
                   <input type="submit" value="Submit" disabled={!props.emailStatus}/>
@@ -235,9 +235,15 @@ const HomeView = (props) => {
               <div>
                 <FontAwesomeIcon icon={faTiktok} />
                 <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faYoutube} />
-                <FontAwesomeIcon icon={faInstagram} />
-                <FontAwesomeIcon icon={faXTwitter} />
+                <a href="https://www.youtube.com/@74_doses" target="_blank" style={{cursor: 'pointer'}}>
+                  <FontAwesomeIcon icon={faYoutube} />
+                </a>
+                <a href="https://www.instagram.com/74doses/" target="_blank" style={{cursor: 'pointer'}}>
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+                <a href="https://x.com/74doses" target="_blank" style={{cursor: 'pointer'}}>
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </a>
               </div>
             </footer>
           </div>

@@ -19,6 +19,15 @@ const TestView = (props) => {
               </div>
             </div>
           </div>
+          {/* <div className="flex flex-center w-[100vw] h-[100vh]">
+            <div className="flex-center" style={{ position: 'relative'}}>
+              <img style={{ borderRadius: '10px'}} src="./logo_test.png"></img>
+              <div className="absolute text-white font-rock text-[35px]"
+              style={{
+                left: '55%'
+              }}>74°Doses</div>
+            </div>
+          </div> */}
       </>
   );
 };

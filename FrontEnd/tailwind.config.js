@@ -36,7 +36,16 @@ export default {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('tailwind-scrollbar')
+    require('tailwind-scrollbar'),
+    function ({ addComponents }) {
+      addComponents({
+        '.flex-center': {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        },
+      })
+    }
   ],
 }
 
