@@ -13,6 +13,7 @@ const HomeScript = () => {
     const [chosed, setChosed] = useState(1)
 
     const bandName = '74°Doses';
+    const noneImg = './imgs/simple_white.png';
 
     const albums = [
         { id: 1, name: "Meu Lamento", img: "./imgs/image.png"},
@@ -120,7 +121,7 @@ const HomeScript = () => {
     return (
         <>
             <HomeView music={albums} members={group} isLogged={userRx.isLoggedIn} emailStatus={emailEnabled} done={done} today={today} bandName={bandName}
-            tours={events} media={pictures} scrollPosition={scrollPosition} handleBuyTicket={handleBuyTicket}
+            tours={events} media={pictures} scrollPosition={scrollPosition} handleBuyTicket={handleBuyTicket} noneImg={noneImg}
             chosed={chosed} handleSetChosed={handleSetChosed}/>
         </>
     );

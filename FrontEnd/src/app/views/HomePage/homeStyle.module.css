@@ -446,7 +446,8 @@ footer > form > div:not(div:nth-child(2)) {
 }
 
 footer > form > div:not(div:nth-child(2)) > :first-child {
-    @apply mb-2 font-alkatra text-xl
+    font-weight: 600;
+    @apply mb-2 text-xl
 }
 
 footer > form > div:nth-child(2) {
@@ -458,7 +459,8 @@ footer > form > div:nth-child(2) > div {
 }
 
 footer > form > div:nth-child(2) > div > :first-child {
-    @apply mb-2 font-alkatra text-xl
+    font-weight: 600;
+    @apply mb-2 text-xl
 }
 
 footer > form > div:nth-child(2) > div:nth-child(2) {

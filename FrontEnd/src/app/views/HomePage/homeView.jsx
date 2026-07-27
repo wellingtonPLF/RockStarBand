@@ -78,7 +78,7 @@ const HomeView = (props) => {
                                     <img className={styles.imgMusic} src={element.img} />
                                   </> : <>
                                     <div className={`${styles.imgMusic} bg-bluegray flex-center`}>
-                                      <img className="h-44 bg-bluegray" src='./imgs/question.png' />
+                                      <img className="bg-bluegray" src={props.noneImg} />
                                     </div>
                                   </>
                                 }
@@ -113,7 +113,7 @@ const HomeView = (props) => {
                                 <img src={e.img} />
                               </> : <>
                                 <div className="w-56 h-56 bg-bluegray flex flex-center">
-                                  <img className="!w-[100px] !h-[140px] object-contain" src='./imgs/question.png' />
+                                  <img className="object-contain" src={props.noneImg} />
                                 </div>
                               </>
                             }
@@ -209,7 +209,7 @@ const HomeView = (props) => {
                             {
                               e == "" ? <>
                                 <div key={index} className="bg-bluegray flex-center">
-                                  <img className=" h-56 bg-bluegray" src='./imgs/question.png' />
+                                  <img className="h-64 bg-bluegray" src={props.noneImg} />
                                 </div>
                               </>:<>
                               <div key={index} style={{backgroundImage: `url(${e})`}}></div> 
@@ -262,11 +262,19 @@ const HomeView = (props) => {
               </div>
               <div className={styles.footerLegal}>
                 <div style={{
-                    backgroundColor: 'unset !important'
+                    backgroundColor: 'unset !important',
+                    position: 'relative'
                   }} className={styles.footerLogo}>
-                  <img style={{
-                    width: '110px',
-                  }} src="./imgs/logo.png" />
+                  
+
+                  <div
+                    className={`${styles.imgMusic} w-24 h-24 bg-center bg-cover bg-no-repeat`}
+                    style={{
+                      borderRadius: '100%',
+                      backgroundImage: `linear-gradient(#3b056547, #3b056547), url("./imgs/simple_red.png")`,
+                    }}
+                  />
+
                 </div>
                 <p className={styles.footerCopyright}>
                   ™ © {props.today.getFullYear().toString()} {props.bandName}. 
