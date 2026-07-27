@@ -34,7 +34,7 @@ const HomeScript = () => {
             // name: "LEANDRO MENEZES", 
             name: "___________", 
             position: "GUITAR", 
-            img: undefined
+            img: undefined, 
         },
         {
             id: 3, 

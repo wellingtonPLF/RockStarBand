@@ -65,7 +65,7 @@ const HomeView = (props) => {
                         <div key={element.id}>
                           <div style={{position: 'relative'}}>
                             {
-                              index == 3 ? <>
+                              index == 4 ? <>
                                 <div
                                   className={`${styles.imgMusic} w-56 h-56 bg-center bg-cover bg-no-repeat`}
                                   style={{
@@ -77,7 +77,9 @@ const HomeView = (props) => {
                                   element.img ? <>
                                     <img className={styles.imgMusic} src={element.img} />
                                   </> : <>
-                                    <div className={`${styles.imgMusic} bg-bluegray`}></div>
+                                    <div className={`${styles.imgMusic} bg-bluegray flex-center`}>
+                                      <img className="h-44 bg-bluegray" src='./imgs/question.png' />
+                                    </div>
                                   </>
                                 }
                                 
@@ -110,7 +112,9 @@ const HomeView = (props) => {
                               e.img ? <>
                                 <img src={e.img} />
                               </> : <>
-                                <div className="w-56 h-56 bg-bluegray"></div>  
+                                <div className="w-56 h-56 bg-bluegray flex flex-center">
+                                  <img className="!w-[100px] !h-[140px] object-contain" src='./imgs/question.png' />
+                                </div>
                               </>
                             }
                             
@@ -204,7 +208,9 @@ const HomeView = (props) => {
                           <>
                             {
                               e == "" ? <>
-                                <div key={index} className="bg-bluegray"></div>
+                                <div key={index} className="bg-bluegray flex-center">
+                                  <img className=" h-56 bg-bluegray" src='./imgs/question.png' />
+                                </div>
                               </>:<>
                               <div key={index} style={{backgroundImage: `url(${e})`}}></div> 
                               </>
