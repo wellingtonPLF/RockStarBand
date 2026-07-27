@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Link as GO } from 'react-scroll';
 import DropDownView from "../../components/dropdown-menu/dropdownView";
+import CookieConsentScript, { openCookiePreferences } from "../../components/cookie-consent/cookieConsentScript";
 
 const HomeView = (props) => {
   const bgColor = (props.scrollPosition != 0)? "bg-red-500": ""
@@ -17,6 +18,7 @@ const HomeView = (props) => {
 
   return (
       <>
+          <CookieConsentScript/>
           <div id={styles.homePage}>
               <header id="home">
                 <div className={bgColor}>
@@ -239,7 +241,7 @@ const HomeView = (props) => {
                   </div>
                   <input type="submit" value="Submit" disabled={!props.emailStatus}/>
               </form>
-              <div>
+              <div className={styles.socialMedia}>
                 <FontAwesomeIcon icon={faTiktok} />
                 <FontAwesomeIcon icon={faFacebook} />
                 <a href="https://www.youtube.com/@74_doses" target="_blank" style={{cursor: 'pointer'}}>
@@ -251,6 +253,24 @@ const HomeView = (props) => {
                 <a href="https://x.com/74doses" target="_blank" style={{cursor: 'pointer'}}>
                   <FontAwesomeIcon icon={faXTwitter} />
                 </a>
+              </div>
+              <div className={styles.footerLegal}>
+                <div style={{
+                    backgroundColor: 'unset !important'
+                  }} className={styles.footerLogo}>
+                  <img style={{
+                    width: '110px',
+                  }} src="./imgs/logo.png" />
+                </div>
+                <p className={styles.footerCopyright}>
+                  ™ © {props.today.getFullYear().toString()} {props.bandName}. 
+                  Todos os direitos reservados. {props.bandName}™ é uma marca registrada de propriedade da SuperVisionary, Inc.
+                </p>
+                <ul className={styles.footerLinks} style={{ fontFamily: "sans-serif" }}>
+                  <li className="cursor-not-allowed"><a>POLÍTICA DE PRIVACIDADE</a></li>
+                  <li className="cursor-not-allowed"><a>TERMOS DE SERVIÇO</a></li>
+                  <li><a href="#" onClick={(e) => { e.preventDefault(); openCookiePreferences(); }}>PREFERÊNCIAS DE COOKIES</a></li>
+                </ul>
               </div>
             </footer>
           </div>

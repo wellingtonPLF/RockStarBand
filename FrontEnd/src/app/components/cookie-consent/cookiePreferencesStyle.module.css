@@ -1,0 +1,139 @@
+.overlay {
+    @apply fixed inset-0 flex items-center justify-center bg-black/70 z-[60] px-4
+}
+
+.modal {
+    @apply w-full max-w-3xl max-h-[85vh] flex flex-col bg-blueblack text-white overflow-hidden rounded-sm;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+    @apply flex items-center justify-between gap-4 px-6 py-5 border-b border-white/10
+}
+
+.headerLeft {
+    @apply flex items-center gap-4
+}
+
+.logo {
+    @apply bg-white text-black font-bold text-xs px-4 py-2 flex-shrink-0
+}
+
+.header h2 {
+    @apply text-xl font-bold m-0
+}
+
+.close {
+    @apply text-2xl leading-none bg-transparent border-none text-white/70 cursor-pointer flex-shrink-0
+}
+
+.close:hover {
+    @apply text-white
+}
+
+.body {
+    @apply flex flex-1 overflow-hidden
+}
+
+.tabs {
+    @apply w-64 flex-shrink-0 border-r border-white/10 overflow-y-auto list-none m-0 p-0
+}
+
+.tabs > li > button {
+    @apply w-full text-left px-5 py-4 bg-transparent border-none border-b border-white/5 text-white/80 text-sm font-semibold cursor-pointer
+}
+
+.tabs > li > button:hover {
+    @apply bg-white/5
+}
+
+.tabActive {
+    @apply !bg-red-500 !text-white
+}
+
+.content {
+    @apply flex-1 overflow-y-auto px-8 py-6
+}
+
+.contentHeader {
+    @apply flex items-center justify-between gap-4 mb-4
+}
+
+.content h3 {
+    @apply text-lg font-bold m-0
+}
+
+.content p {
+    @apply text-sm leading-6 text-gray-300 m-0
+}
+
+.content > a {
+    @apply text-sm underline text-red-400 inline-block mt-3
+}
+
+.toggle {
+    @apply relative inline-block w-11 h-6 flex-shrink-0 cursor-pointer
+}
+
+.toggle input {
+    @apply opacity-0 w-0 h-0
+}
+
+.toggle span {
+    @apply absolute inset-0 rounded-full bg-white/20 transition-colors;
+}
+
+.toggle span::before {
+    content: "";
+    @apply absolute h-4 w-4 left-1 top-1 bg-white rounded-full transition-transform;
+}
+
+.toggle input:checked + span {
+    @apply bg-red-500
+}
+
+.toggle input:checked + span::before {
+    transform: translateX(20px);
+}
+
+.toggleLocked {
+    @apply cursor-not-allowed opacity-60
+}
+
+.footer {
+    @apply flex items-center justify-between gap-4 px-6 py-5 border-t border-white/10
+}
+
+.footer button {
+    @apply text-sm font-bold px-5 py-3 rounded-sm cursor-pointer whitespace-nowrap
+}
+
+.secondary {
+    @apply bg-transparent border border-white/30 text-white
+}
+
+.primary {
+    @apply !bg-red-500 border border-red-500
+}
+
+@media screen and (max-width: 700px) {
+    .body {
+        @apply flex-col
+    }
+
+    .tabs {
+        @apply w-full flex overflow-x-auto border-r-0 border-b border-white/10
+    }
+
+    .tabs > li > button {
+        @apply whitespace-nowrap border-b-0
+    }
+
+    .footer {
+        @apply flex-col
+    }
+
+    .footer button {
+        @apply w-full
+    }
+}

@@ -16,6 +16,3 @@ const api = axios.create({
 });
 
 export default api;
-
-// SPOTIFY integration embbebed
-// FOOTER

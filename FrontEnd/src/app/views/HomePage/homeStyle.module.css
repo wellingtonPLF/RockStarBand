@@ -486,12 +486,28 @@ footer > form > input[type="submit"]:disabled{
     @apply cursor-not-allowed
 }
 
-footer > :last-child {
+footer > .socialMedia {
     @apply flex justify-between w-[40rem] m-auto mt-0
 }
 
-footer > :last-child > * {
+footer > .socialMedia > * {
     @apply text-3xl rounded-full p-6 border-b-4 border-red-500 cursor-not-allowed
+}
+
+.footerLegal {
+    @apply flex flex-col items-center w-full mt-14
+}
+
+.footerLogo {
+    @apply bg-white text-black font-bold px-8 py-4 mb-8
+}
+
+.footerCopyright {
+    @apply text-gray-400 text-xs text-center leading-5 max-w-xl mb-8
+}
+
+.footerLinks {
+    @apply flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-bold tracking-wide
 }
 
 
@@ -535,7 +551,7 @@ footer > :last-child > * {
         @apply pt-7
     }
 
-    footer > :last-child {
+    footer > .socialMedia {
         @apply w-[30rem]
     }
 }
@@ -624,16 +640,29 @@ footer > :last-child > * {
         text-[3vw]
     }
     
-    footer > :last-child {
+    footer > .socialMedia {
         @apply 
         w-[80.6vw]
     }
     
-    footer > :last-child > * {
-        @apply 
+    footer > .socialMedia > * {
+        @apply
         text-[5vw]
-        p-[4vw] 
+        p-[4vw]
         border-b-[0.8vw]
+    }
+
+    .footerLinks {
+        @apply
+        flex-col
+        gap-y-[3vw]
+        text-[3vw]
+    }
+
+    .footerCopyright {
+        @apply
+        text-[2.8vw]
+        max-w-[85vw]
     }
     /* ------------------------------------------------------------------------------------------------------------------------ */
 }
@@ -650,7 +679,7 @@ footer > :last-child > * {
         @apply m-0
     }
 
-    footer > :last-child {
+    footer > .socialMedia {
         @apply flex-col mt-[10px]
     }
 }

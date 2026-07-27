@@ -1,0 +1,54 @@
+#cookieConsent {
+    @apply fixed bottom-0 left-0 w-full flex items-center justify-between gap-8 px-8 py-5 z-50 bg-blueblack text-white;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(100%);
+    transition: transform 0.35s ease-out;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+#cookieConsent.visible {
+    transform: translateY(0);
+}
+
+#cookieConsent > p {
+    @apply text-sm leading-6 flex-1 m-0 text-gray-200
+}
+
+.actions {
+    @apply flex items-center gap-4 flex-shrink-0
+}
+
+.actions > a {
+    @apply text-sm underline text-blue-400 whitespace-nowrap cursor-pointer
+}
+
+.actions > button {
+    @apply text-sm font-bold px-5 py-3 rounded-sm whitespace-nowrap cursor-pointer bg-transparent text-white border border-white/30
+}
+
+.primary {
+    @apply !bg-red-500 !border-red-500
+}
+
+.close {
+    @apply text-2xl leading-none px-2 text-white/70 bg-transparent border-none cursor-pointer flex-shrink-0
+}
+
+.close:hover {
+    @apply text-white
+}
+
+@media screen and (max-width: 800px) {
+    #cookieConsent {
+        @apply flex-col items-start gap-4 py-6
+    }
+
+    .actions {
+        @apply flex-wrap
+    }
+
+    .close {
+        @apply absolute top-3 right-4
+    }
+}
