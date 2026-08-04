@@ -251,7 +251,7 @@ const HomeView = (props) => {
                 <a disabled>
                   <FontAwesomeIcon icon={faTiktok} />
                 </a>
-                <a disabled>
+                <a href="https://www.facebook.com/74doses" target="_blank" style={{cursor: 'pointer'}}>
                   <FontAwesomeIcon icon={faFacebook} />
                 </a>
                 <a href="https://www.youtube.com/@74_doses" target="_blank" style={{cursor: 'pointer'}}>
