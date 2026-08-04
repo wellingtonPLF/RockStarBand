@@ -683,5 +683,9 @@ footer > .socialMedia > * {
 
     footer > .socialMedia {
         @apply flex-col mt-[10px]
+    } 
+    
+    footer > .socialMedia > a {
+        @apply text-center py-2
     }
 }

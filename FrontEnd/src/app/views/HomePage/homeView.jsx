@@ -113,7 +113,7 @@ const HomeView = (props) => {
                                 <img src={e.img} />
                               </> : <>
                                 <div className="w-56 h-56 bg-bluegray flex flex-center">
-                                  <img className="object-contain" src={props.noneImg} />
+                                  <img className="object-contain !h-[800px]" src={props.noneImg} />
                                 </div>
                               </>
                             }
@@ -209,7 +209,7 @@ const HomeView = (props) => {
                             {
                               e == "" ? <>
                                 <div key={index} className="bg-bluegray flex-center">
-                                  <img className="h-64 bg-bluegray" src={props.noneImg} />
+                                  <img className="h-[25vw] max-h-64 bg-bluegray" src={props.noneImg} />
                                 </div>
                               </>:<>
                               <div key={index} style={{backgroundImage: `url(${e})`}}></div> 
@@ -248,8 +248,12 @@ const HomeView = (props) => {
                   <input type="submit" value="Submit" disabled={!props.emailStatus}/>
               </form>
               <div className={styles.socialMedia}>
-                <FontAwesomeIcon icon={faTiktok} />
-                <FontAwesomeIcon icon={faFacebook} />
+                <a disabled>
+                  <FontAwesomeIcon icon={faTiktok} />
+                </a>
+                <a disabled>
+                  <FontAwesomeIcon icon={faFacebook} />
+                </a>
                 <a href="https://www.youtube.com/@74_doses" target="_blank" style={{cursor: 'pointer'}}>
                   <FontAwesomeIcon icon={faYoutube} />
                 </a>
@@ -280,7 +284,7 @@ const HomeView = (props) => {
                   ™ © {props.today.getFullYear().toString()} {props.bandName}. 
                   Todos os direitos reservados. {props.bandName}™ é uma marca registrada de propriedade da SuperVisionary, Inc.
                 </p>
-                <ul className={styles.footerLinks} style={{ fontFamily: "sans-serif" }}>
+                <ul className={styles.footerLinks} style={{ fontFamily: "sans-serif", textAlign: 'center' }}>
                   <li className="cursor-not-allowed"><a>POLÍTICA DE PRIVACIDADE</a></li>
                   <li className="cursor-not-allowed"><a>TERMOS DE SERVIÇO</a></li>
                   <li><a href="#" onClick={(e) => { e.preventDefault(); openCookiePreferences(); }}>PREFERÊNCIAS DE COOKIES</a></li>

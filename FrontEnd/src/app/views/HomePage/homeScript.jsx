@@ -18,8 +18,8 @@ const HomeScript = () => {
     const albums = [
         { id: 1, name: "Meu Lamento", img: "./imgs/image.png"},
         { id: 2, name: "Perceptível", img: "./imgs/my_room.png"},
-        { id: 3, name: "********", img: undefined},
-        { id: 4, name: "********", img: undefined}
+        { id: 3, name: "Persona", img: "./imgs/smile.png"},
+        { id: 4, name: "Incômodo", img: "./imgs/cry.png"}
     ];
 
     const group = [
