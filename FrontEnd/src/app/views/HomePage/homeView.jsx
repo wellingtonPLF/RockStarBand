@@ -44,7 +44,7 @@ const HomeView = (props) => {
                       <GO to={`${styles.members}`} smooth={true} duration={100} className={hoverClick}>Members</GO>
                       <GO to={`${styles.events}`} smooth={true} duration={100} className={hoverClick}>Events</GO>
                       <GO to={`${styles.media}`} smooth={true} duration={100} className={hoverClick}>Media</GO>
-                      <GO to="contact" smooth={true} duration={100} className={hoverClick}>Contact</GO>
+                      <GO to={`${styles.contact}`} smooth={true} duration={100} className={hoverClick}>Contact</GO>
                     </ul>
                   </nav>
                 </div>
@@ -221,7 +221,7 @@ const HomeView = (props) => {
                   </div>
               </section>
             </main>
-            <footer id="contact">
+            <footer id={styles.contact}>
               <form action="" method="post">
                   <div>
                     <label htmlFor="name">Name</label>
@@ -269,16 +269,16 @@ const HomeView = (props) => {
                     backgroundColor: 'unset !important',
                     position: 'relative'
                   }} className={styles.footerLogo}>
-                  
-
-                  <div
-                    className={`${styles.imgMusic} w-24 h-24 bg-center bg-cover bg-no-repeat`}
-                    style={{
-                      borderRadius: '100%',
-                      backgroundImage: `linear-gradient(#3b056547, #3b056547), url("./imgs/simple_red.png")`,
-                    }}
-                  />
-
+                  <GO to="home" smooth={true} duration={100} className={hoverClick}>
+                    <div
+                      className={`${styles.imgMusic} w-24 h-24 bg-center bg-cover bg-no-repeat`}
+                      style={{
+                        borderRadius: '100%',
+                        cursor: 'pointer',
+                        backgroundImage: `linear-gradient(#3b056547, #3b056547), url("./imgs/simple_red.png")`,
+                      }}
+                    />
+                  </GO>
                 </div>
                 <p className={styles.footerCopyright}>
                   ™ © {props.today.getFullYear().toString()} {props.bandName}. 

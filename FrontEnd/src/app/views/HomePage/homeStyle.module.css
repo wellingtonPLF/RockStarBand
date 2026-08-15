@@ -419,6 +419,29 @@ main section {
 }
 
 /* ------------------------------------------------------------ */
+
+#contact input, #contact textarea{
+    background-color: #00000057;
+    @apply !border-gray-700
+}
+
+#contact input[type="submit"]{
+    @apply 
+    bg-red-500
+    p-3 
+    pl-10 
+    pr-10 
+    font-bold 
+    rounded-md 
+    mt-5 
+    w-full 
+    text-lg 
+    font-rock 
+    cursor-pointer
+    disabled:bg-gray-700
+    disabled:cursor-not-allowed
+}
+
 footer {
     overflow-y: auto;
     min-height: 100vh;
@@ -471,21 +494,8 @@ footer textarea {
     @apply resize-none
 }
 
-footer  input, textarea {
-    background-color: #00000057 !important;
-    @apply !border-gray-700
-}
-
 footer > form > div > input[type="text"], input[type="email"], input[type="tel"] {
     @apply h-16
-}
-
-footer > form > input[type="submit"]{
-    @apply !bg-red-500 p-3 pl-10 pr-10 font-bold rounded-md mt-5 w-full text-lg font-rock cursor-pointer
-}
-
-footer > form > input[type="submit"]:disabled{
-    @apply cursor-not-allowed
 }
 
 footer > .socialMedia {
