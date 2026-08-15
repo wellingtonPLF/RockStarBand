@@ -248,12 +248,9 @@ const HomeView = (props) => {
                   <input type="submit" value="Submit" disabled={!props.emailStatus}/>
               </form>
               <div className={styles.socialMedia}>
-                <a disabled>
+                <a href="https://www.tiktok.com/@74doses" target="_blank" style={{cursor: 'pointer'}}>
                   <FontAwesomeIcon icon={faTiktok} />
                 </a>
-                {/* <a href="https://www.tiktok.com/@74doses" target="_blank" style={{cursor: 'pointer'}}>
-                  <FontAwesomeIcon icon={faFacebook} />
-                </a> */}
                 <a href="https://www.facebook.com/74doses" target="_blank" style={{cursor: 'pointer'}}>
                   <FontAwesomeIcon icon={faFacebook} />
                 </a>
