@@ -12,7 +12,7 @@ const SignInView = (props) => {
             </div>
             <form onSubmit={props.authenticate} autoComplete={props.autoComplete}>
               <div id={styles.topAuth}>
-                <h1>Welcome to SuperVisionary</h1>
+                <h1>Welcome to 74°Doses</h1>
                 <div>Please enter your authentication</div>
               </div>
               <div className="emailType" id={styles.auth}>

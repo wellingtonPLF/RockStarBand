@@ -15,7 +15,7 @@
 }
 
 #authPage > :nth-child(2) {
-    @apply w-full min-h-[50vh] pl-10 bg-red-500 bg-opacity-70 flex items-start justify-center pb-24
+    @apply w-full min-h-[50vh] pl-10 bg-red-500 bg-opacity-50 flex items-start justify-center pb-24
 }
 
 #authPage > :nth-child(2) > div {
@@ -45,10 +45,10 @@
     }
 
     #authPage > :first-child {
-        @apply justify-center p-0 pb-20 h-[100vh]
+        @apply justify-center items-end p-0 pt-10 pb-10 h-auto min-h-0 h-[50vh]
     }
 
     #authPage > :last-child {
-        @apply hidden p-0 items-center pb-10 pt-5 justify-start bg-transparent
+        @apply p-0 items-center pb-10 pt-5 justify-start bg-red-500 bg-opacity-50  w-full min-h-0 h-[50vh]
     }
 }
